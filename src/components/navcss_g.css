@@ -3,12 +3,15 @@
     height: 70px;
 }
 
-.bag{
-width:30px;
-/* border: 2px solid red; */
+/* .bag{
+
+border: 2px solid red;
 color: green;
 background-color:rgb(236,236,236) ;
-}
+
+
+} */
+
 
 .btn1{
     width:30px;
@@ -40,4 +43,5 @@ form{
 
 .big_box{
     border-bottom: 1px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }

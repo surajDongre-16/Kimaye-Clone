@@ -1,8 +1,12 @@
 import React from 'react'
-
+import Footer from '../components/Footer'
 const Grow = () => {
   return (
-    <div>Grow</div>
+    <div>Grow
+
+
+<Footer/>
+    </div>
   )
 }
 
