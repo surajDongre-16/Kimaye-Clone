@@ -7,7 +7,7 @@ import Learn from './pages/Learn';
 import Grow from './pages/Grow';
 import Location from './pages/Location';
 import Login from './pages/Login';
-import Cart from './pages/Cart';
+import Cart from './pages/cart/Cart';
 
 function App() {
   return (
