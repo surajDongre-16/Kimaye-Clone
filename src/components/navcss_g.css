@@ -1,0 +1,43 @@
+.nav{
+    background-color: rgb(236,236,236);
+    height: 70px;
+}
+
+.bag{
+width:30px;
+/* border: 2px solid red; */
+color: green;
+background-color:rgb(236,236,236) ;
+}
+
+.btn1{
+    width:30px;
+    background-color:rgb(236,236,236);
+}
+
+
+
+.ul1{
+list-style-type:none;
+}
+
+.logo{
+    
+    /* border: 2px solid red; */
+}
+
+form{
+    /* border: 1px solid black; */
+}
+.wrapper{
+    display: flex;
+    justify-content:space-around;
+}
+
+.right_box{
+    display: flex;
+}
+
+.big_box{
+    border-bottom: 1px solid grey;
+}
