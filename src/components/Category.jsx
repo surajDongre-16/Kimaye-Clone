@@ -1,138 +1,120 @@
-import React, { useState } from 'react'
-import {Link } from '@chakra-ui/react'
-  import navcss from "./navcss.module.css";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import navcss from "./navcss.module.css";
 
-
+import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
 
 const Category = () => {
-
-
-
-
-
-// const [fix, setFix] = useState(false);
-
-// function setFixed() {
-//   if (window.scrollY >= 50) {
-//     setFix(true);
-//   } else {
-//     setFix(false);
-//   }
-// }
-
-// window.addEventListener("scroll", setFixed);
+  let cat = [
+    {
+      id: 1,
+      title: "SHOP",
+      path: "/",
+      sub: {
+        a: "All Fruits",
+        p1: "/",
+        b: "Fresh Fruits",
+        p2: "/",
+        c: "Fruits Combos",
+        p3: "/",
+        d: "Gift By Kimaye",
+        p4: "/",
+        e: "Grape Family By Kimaye",
+        p5: "/",
+        f: "Resturant And Replacement",
+        p6: "/",
+        g: "Friuts X Subscription",
+        p7: "/",
+        h: "Community Buying",
+        p8: "/",
+      },
+    },
+    {
+      id: 2,
+      title: "LEARN",
+      path: "/Learn",
+      sub: {
+        a: "Our Story",
+        p1: "/Learn",
+        b: "Why Kimaye",
+        p2: "/",
+        c: "Traceability",
+        p3: "/",
+        d: "Beyond Fruits",
+        p4: "/",
+        e: "Grape Family By Kimaye",
+        p5: "/",
+        p6: "/",
+        p7: "/",
+        p8: "/",
+      },
+    },
+  ];
 
   return (
-    <div>
-        
-        <nav className="navbar  navbar-expand-lg ">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/"></Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className="collapse navbar-collapse wrapper"
-            id="navbarSupportedContent"
-          >
-            {/* first box start from here */}
+    <div className={navcss.upper_box}>
+      {cat.map((el) => (
+        <div className="main_menu" key={el.id}>
+          <Link className="menu-btn" to={el.path}>
+            {el.title}
+          </Link>
 
-            <div className={navcss.firstdiv}>
-              <form>
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link active"
-                      aria-current="page"
-                      to="/"
-                    >
-                      SHOP
+          <div className="xyz">
+            <div className="b">
+              <div className="div">
+                <ul>
+                  <li>
+                    <Link className="p" to={el.sub.p1}>
+                      {el.sub.a}
                     </Link>
                   </li>
-                 </ul >
-
-
-                  <ul className="navbar-nav me-auto mb-2 mb-lg-0 " >
-                  <li className="nav-item">
-                    <Link className="nav-link active" to="/Learn">
-                      LEARN
+                  <li>
+                    <Link className="p" to={el.sub.p2}>
+                      {el.sub.b}
                     </Link>
                   </li>
-                  </ul>
-                  {/* <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle"to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            SHOP
-          </Link>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item"to="/">Action</Link></li>
-            <li><Link className="dropdown-item"to="/">Another action</Link></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><Link className="dropdown-item"to="/">Something else here</Link></li>
-          </ul>
-        </li>
-
-
-
-        <li className="nav-item dropdown">
-          <Link  to="/Learn" className="nav-link dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false" >
-            LEARN
-          </Link>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item"to="/Learn">Action</Link></li>
-            <li><Link className="dropdown-item"to="/">Another action</Link></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><Link className="dropdown-item"to="/">Something else here</Link></li>
-          </ul>
-        </li>
-
-
-
-        
-
-
-
-
-
-        <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle"to="/Grow" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            GROW
-          </Link>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item"to="/">Action</Link></li>
-            <li><Link className="dropdown-item"to="/">Another action</Link></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><Link className="dropdown-item"to="/">Something else here</Link></li>
-          </ul>
-        </li> */}
-
-
-
-
-
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
-                  <li className="nav-item">
-                    <Link className="nav-link active" to="/Grow">
-                      GROW
+                  <li>
+                    <Link className="p" to={el.sub.p3}>
+                      {el.sub.c}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="p" to={el.sub.p4}>
+                      {el.sub.d}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="p" to={el.sub.p5}>
+                      {el.sub.e}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="p" to={el.sub.p6}>
+                      {el.sub.f}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="p" to={el.sub.p7}>
+                      {el.sub.g}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="p" to={el.sub.p8}>
+                      {el.sub.h}
                     </Link>
                   </li>
                 </ul>
-              </form>
+              </div>
             </div>
-
-            </div>
+          </div>
         </div>
-      </nav>
- 
-</div>
-  )
-}
+      ))}
 
-export default Category
+      <Link className="grow" to="/Grow">
+        GROW
+      </Link>
+    </div>
+  );
+};
+
+export default Category;
