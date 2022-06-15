@@ -126,6 +126,7 @@ const Cart = () => {
     <Box>
       <Center>
         <Text>Pick a Delivery date:</Text>
+        <br/>
         <Input type='date' size='md' w='20%' />
         <Text>Choose a time:</Text>
         <Select w='20%' size='md'>
