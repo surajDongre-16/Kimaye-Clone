@@ -29,7 +29,7 @@ export const addtoCart = (link, id) => (dispatch) => {
                 count: 1
             }
 
-            axios.post(`http://localhost:8080/cart-data`, r.data)
+            axios.post(`http://localhost:8080/cart-data`, data)
         })
 
 
