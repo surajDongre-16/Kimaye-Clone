@@ -92,7 +92,7 @@ const Right_box = () => {
           bg="rgb(236,236,236)"
           onClick={onOpen}
         >
-          <img className={navcss.bag_logo} src={Bag}/>
+          <img className={navcss.bag_logo} src={Bag}/><sup>10</sup>
         </Button>
         <Drawer
           isOpen={isOpen}
