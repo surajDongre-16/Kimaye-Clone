@@ -1,0 +1,28 @@
+
+.payment_left_box{
+    width: 60%;
+    height: 100vh;
+    background-color: #ececec ;
+
+}
+
+.payment_left_inner{
+    width: 75%;
+    margin: 6% auto;
+    padding-left: 10%;
+}
+.a{
+    color: red;
+    width: 70%;
+    margin-top: 3%;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos{
+    width: 60%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
