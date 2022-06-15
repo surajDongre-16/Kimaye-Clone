@@ -10,22 +10,22 @@ const Category = () => {
 
 
 
-const [fix, setFix] = useState(false);
+// const [fix, setFix] = useState(false);
 
-function setFixed() {
-  if (window.scrollY >= 50) {
-    setFix(true);
-  } else {
-    setFix(false);
-  }
-}
+// function setFixed() {
+//   if (window.scrollY >= 50) {
+//     setFix(true);
+//   } else {
+//     setFix(false);
+//   }
+// }
 
-window.addEventListener("scroll", setFixed);
+// window.addEventListener("scroll", setFixed);
 
   return (
     <div>
         
-        <nav className= {fix?"navbar fixed-top navbar-expand-lg  ":"navbar navbar-expand-lg nav"}>
+        <nav className="navbar  navbar-expand-lg ">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/"></Link>
           <button
