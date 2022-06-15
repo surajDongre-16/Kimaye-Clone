@@ -9,14 +9,73 @@
 .logo{
     width: 140px;
     height: 35px;
-    margin: auto;
-    margin-left: 10%;
+    /* margin: auto; */
+    /* margin-left: 10%; */
 }
 
 
 .iconbtn{
-    margin-right: 15px;
+    margin-right: 25px;
+    margin-left: -20px;
+}
+
+.kimayelogo{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    /* border: 1px solid red; */
+    list-style-type: none;
+    align-items: center;
+}
+
+.firstdiv{
+    width:30%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    
 }
 
 
 
+
+
+.Right_box{
+    display: flex;
+  
+   
+}
+
+.inner_box{
+    background-color:  rgb(236,236,236) ;
+}
+
+
+.bag_logo{
+    width:100%;
+    height:21px;
+}
+
+
+.loc_logo{
+     width: 45px;
+     height: 53px;
+}
+
+.abc{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+sub{
+    margin-left: -20px;
+
+}
+
+.btn_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -5,8 +5,6 @@ const Shop = () => {
   return (
     <div>Shop
 
-
-
       <Footer/>
     </div>
   )
