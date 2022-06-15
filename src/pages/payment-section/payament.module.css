@@ -1,0 +1,17 @@
+.payment_main_box{
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+}
+.payment_left_box{
+    width: 60%;
+    height: auto;
+    background-color: #ececec ;
+
+}
+
+.payment_left_inner{
+    width: 75%;
+    margin: 6% auto;
+    padding-left: 10%;
+}
