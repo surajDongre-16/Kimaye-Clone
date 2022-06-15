@@ -8,11 +8,12 @@ import Grow from './pages/Grow';
 import Location from './pages/Location';
 import Login from './pages/Login';
 import Cart from './pages/cart/Cart';
+import Payment from './pages/payment-section/Payment';
 
 function App() {
   return (
     <div>
-     <Navbar/>
+     {/* <Navbar/>
      <Routes>
       <Route path="/" element={<Shop/>}/>
       <Route path="/Learn" element={<Learn/>}/>
@@ -20,8 +21,8 @@ function App() {
       <Route path="/Location" element={<Location/>}/>
       <Route path="/Login" element={<Login/>}/>
       <Route path="/Cart" element={<Cart/>}/>
-     </Routes>
-    
+     </Routes> */}
+    <Payment/>
     </div>
   );
 }
