@@ -13,6 +13,17 @@ import LogoKimaye from "./LogoKimaye";
 const Navbar = () => {
 
 
+  const [fix, setFix] = useState(false);
+
+  function setFixed() {
+    if (window.scrollY >= 50) {
+      setFix(true);
+    } else {
+      setFix(false);
+    }
+  }
+  
+  window.addEventListener("scroll", setFixed);
  
 
   return (
@@ -21,10 +32,8 @@ const Navbar = () => {
         Delivery in Mumbai and Delhi | Same day delivery!
       </Box>
 
-      <div className={navcss.inner_box}>
+      <div className={fix?"inner_box fixed-top":"inner_box"}>
         <Box
-        
-       
           // border="1px solid grey"
           w="100%"
           p={4}

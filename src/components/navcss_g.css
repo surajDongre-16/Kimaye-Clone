@@ -57,7 +57,7 @@ form{
 }
 
 .big_box{
-    border-bottom: 1px solid grey;
+  
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     overflow: visible;
     margin-bottom: 30px;
@@ -96,3 +96,7 @@ form{
 }
 
 
+.inner_box{
+    background-color:  rgb(236,236,236) ;
+    border-bottom: 1px solid grey;
+}
