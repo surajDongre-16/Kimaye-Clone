@@ -3,6 +3,7 @@
     height: 70px;
 }
 
+
 /* .bag{
 
 border: 2px solid red;
@@ -11,11 +12,21 @@ background-color:rgb(236,236,236) ;
 
 
 } */
-
+.navbar.fixed-top{
+    background-color: rgb(236,236,236);
+    transition: .3s ease-in-out;
+    z-index: 1020;
+    border-bottom: 1px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    height: 70px;
+    align-items: center;
+    list-style-type:none;
+}
 
 .btn1{
     width:30px;
     background-color:rgb(236,236,236);
+    /* border: 1px solid red; */
 }
 
 
@@ -39,9 +50,49 @@ form{
 
 .right_box{
     display: flex;
+    width: 50%;
+  justify-content: center;
+   /* border:1px solid red */
+
 }
 
 .big_box{
     border-bottom: 1px solid grey;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    overflow: visible;
+    margin-bottom: 30px;
+    font-family: cursive;
+
+ 
 }
+
+.search_input{
+  border: 0;
+  width:150px;
+  border-bottom: 1px solid grey;
+    margin-left: 10px;
+    background-color:rgb(236,236,236) ;
+    border-radius: 0;
+    
+}
+.search_input:focus{
+    background-color:rgb(236,236,236);
+   width: 100%;
+   transition: .8s;
+
+}
+
+
+form{
+    display: flex;
+    gap:20px;
+}
+
+.btn2{
+    width: 50px;
+    /* border:1px solid green; */
+  margin-left: -20px;
+
+}
+
+
