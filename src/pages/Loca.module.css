@@ -1,0 +1,63 @@
+
+
+.btn:focus{
+    /* border: 1px solid red; */
+ 
+}
+
+
+.shopping{
+    height: 40%;
+    width: 40%;;
+    margin: auto;
+   margin-top: 25px;
+}
+
+.modal{
+    min-width: 45%;
+}
+
+.inst{
+    font-size: 20px;
+    padding: 25px;
+  text-align: center;
+}
+
+.pin{
+    width:50%;
+    height: 40px;
+    padding-left: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+  outline: 0;
+  border: 1px solid rgb(211, 208, 208);
+  letter-spacing:10px;
+  font-weight: 600;
+  text-align:center;
+  font-size: 20px;
+  color:rgb(14, 84, 235)
+} 
+
+.pin:focus{
+    border: 1px solid rgb(14, 84, 235);
+}
+
+.loc_logo {
+    width: 45px;
+    height: 60px;
+    margin-bottom: -10px;
+  }
+
+  sub {
+    /* margin-left: -20px;
+   padding-bottom: 20px; */
+  color:red;
+  }
+  
+
+  .btn1{
+    margin: auto;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+  

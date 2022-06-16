@@ -11,38 +11,34 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Button,
-  Input,useDisclosure
+  Input,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { SearchIcon } from "@chakra-ui/icons";
-import Bag from "../assests/Bag.png"
-import Loc from "../assests/Loc.png"
-
-
+import Bag from "../assests/Bag.png";
+import Loc from "../assests/Loc.png";
+import Location from "../pages/Location";
 
 const Right_box = () => {
-
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    const btnRef = React.useRef();
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
   return (
-  <div className={navcss.Right_box}>
+    <div className={navcss.Right_box}>
       <form className="d-flex" role="search">
         <ul className="ul1">
           <li className="nav-item">
-            <Link className="nav-link" to="/Location">
-                <div className={navcss.abc}>
-              <img className={navcss.loc_logo} src={Loc}/><sub><b>Delhi</b></sub>
-              </div>
-            </Link>
+            <div className={navcss.abc}>
+              <Location />
+            </div>
           </li>
         </ul>
 
         <input
           className="form-control me-2 shadow-none search_input"
           type="search"
-          placeholder="Search"
+          placeholder="Search here..."
           aria-label="Search"
         />
 
@@ -92,7 +88,8 @@ const Right_box = () => {
           bg="rgb(236,236,236)"
           onClick={onOpen}
         >
-          <img className={navcss.bag_logo} src={Bag}/><sup>10</sup>
+          <img className={navcss.bag_logo} src={Bag} />
+          <sup>10</sup>
         </Button>
         <Drawer
           isOpen={isOpen}
@@ -118,7 +115,7 @@ const Right_box = () => {
           </DrawerContent>
         </Drawer>
       </form>
-      </div>
+    </div>
   );
 };
 
