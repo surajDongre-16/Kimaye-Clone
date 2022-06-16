@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import { useEffect, useState } from "react";
 import RotateLoader from "react-spinners/RotateLoader";
 import './App.css';
+import LocRequiredAuth from "./hoc/LocRequiredAuth";
 
 
 
@@ -23,7 +24,7 @@ function App() {
 
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 5000);
   }, []);
 
   return (

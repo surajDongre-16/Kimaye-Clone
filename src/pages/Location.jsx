@@ -11,10 +11,11 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import Loc from "../assests/Loc.png";
-import navcss from "../components/navcss.module.css";
 import Loca from "./Loca.module.css";
-import axios from "axios";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+
+
 
 const Location = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -26,30 +27,55 @@ const Location = () => {
   };
 
   const [pin, setPin] = useState("");
+  const [sendPin,setSendPin]=useState([])
+
+  const navigate=useNavigate()
+
+
   const ref = useRef();
 
   const handleClick = () => {
     if (!pin) {
       ref.current.focus();
     }
-
+  
     fetch(`https://api.postalpincode.in/pincode/${pin}`)
       .then((res) => res.json())
       .then((data) => {
-        if (data[0].PostOffice[0].Circle == "Delhi") {
+       
+     
+        if (data[0].PostOffice[0].Circle == "Delhi"){
           setPin(data[0].PostOffice[0].Circle);
+          window.localStorage.setItem("Pincode",JSON.stringify(data[0].PostOffice[0].Circle))
           console.log(data[0].PostOffice[0].Circle);
-        } else if (data[0].PostOffice[0].District == "Mumbai") {
+          onClose()
+          
+        } else if (data[0].PostOffice[0].District == "Mumbai"  ) {
           setPin(data[0].PostOffice[0].District);
+          window.localStorage.setItem("Pincode",JSON.stringify(data[0].PostOffice[0].District))
           console.log(data[0].PostOffice[0].District);
-        } else {
+          onClose()
+        }
+        
+         else {
           setPin("");
-          alert(
-            "Sorry! We do not deliver to your Pincode currently.Showing you results for Delhi & Mumbai."
-          );
+          alert("Sorry! We do not deliver to your Pincode currently.Showing you results for Delhi & Mumbai.");
         }
       });
+
+     
   };
+
+  
+  useEffect(()=>{
+
+     const pinData=window.localStorage.getItem("Pincode")
+     if ( pinData !==null ) setPin(JSON.parse(pinData));
+     console.log(pinData)
+  },[])
+
+
+
 
   return (
     <div>
@@ -65,7 +91,7 @@ const Location = () => {
           <div>
             <img className={Loca.loc_logo} src={Loc} />
             <sub>
-              <b>{pin}</b>
+              <b>{ pin}</b>
             </sub>
           </div>
         }
@@ -88,8 +114,10 @@ const Location = () => {
               type="text"
               ref={ref}
               className={Loca.pin}
-              placeholder="Enter Pincode of your area..."
+              placeholder="Enter Pincode..."
+              maxLength={6}
               onChange={(e) => setPin(e.target.value)}
+              
             />
           </div>
 
@@ -101,8 +129,10 @@ const Location = () => {
               colorScheme="blue"
               className={Loca.btn1}
               onClick={handleClick}
+              
             >
               Done
+             
             </Button>
           </ModalFooter>
         </ModalContent>
