@@ -108,6 +108,38 @@
             "entry-content":"May 17, 2020 (IANSlife) \"Work from Home\" during quarantine has changed our lifestyles; keeping a check on nutrition can be tough when our home is our office.   Unlike at the office, here we have plenty of packed...",
             "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/meet-your-health-goals-during-the-lockdown"
         }
+    ],
+    "cartData":[
+        {
+            "id":1,
+            "item_img":"https://cdn.shopify.com/s/files/1/0449/5225/6667/products/litchi--_-keasr_219x.progressive.jpg?v=1654850892",
+            "item_name":"Kimaye Litchi-Kesar Combo",
+            "item__weight": "(500 g + 3 pcs)",
+            "item_price": 275,
+            "item_quantity": 1,
+            "total_price": 275
+
+        },
+        {
+            "id":2,
+            "item_img":"https://cdn.shopify.com/s/files/1/0449/5225/6667/products/litchi--_-keasr_219x.progressive.jpg?v=1654850892",
+            "item_name":"Kimaye Litchi-Kesar Combo",
+            "item__weight": "(500 g + 3 pcs)",
+            "item_price": 275,
+            "item_quantity": 1,
+            "total_price": 275
+
+        }
+    ],
+    "userDetails":[
+        {
+            "user_email":"surajdongre8@gmail.com",
+            "user_address":"Near Manwatkar Hospital, Ekori ward",
+            "user_city":"Chandrapur",
+            "user_state":"Maharashtra",
+            "user_pincode":"442401",
+            "user_no":123456789
+        }
     ]
 }
 
