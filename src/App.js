@@ -8,18 +8,12 @@ import Learn from "./pages/Learn";
 import Grow from "./pages/Grow";
 import Location from "./pages/Location";
 import Login from "./pages/Login";
-import Cart from "./pages/Cart";
+// import Cart from "./pages/Cart";
 import { useEffect, useState } from "react";
 import RotateLoader from "react-spinners/RotateLoader";
 import './App.css';
-import Navbar from "./components/Navbar"
-import { Routes, Route} from "react-router-dom";
-import Shop from './pages/Shop';
-import Learn from './pages/Learn';
-import Grow from './pages/Grow';
-import Location from './pages/Location';
-import Login from './pages/Login';
-import Cart from './pages/cart/Cart';
+
+
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -29,7 +23,7 @@ function App() {
 
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 1000);
   }, []);
 
   return (
@@ -55,7 +49,7 @@ function App() {
             <Route path="/Grow" element={<Grow />} />
             <Route path="/Location" element={<Location />} />
             <Route path="/Login" element={<Login />} />
-            <Route path="/Cart" element={<Cart />} />
+            {/* <Route path="/Cart" element={<Cart />} /> */}
           </Routes>
         </div>
       )}

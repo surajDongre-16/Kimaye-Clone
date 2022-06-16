@@ -47,10 +47,6 @@
   height: 21px;
 }
 
-.loc_logo {
-  width: 45px;
-  height: 60px;
-}
 
 .abc {
   display: flex;
@@ -58,10 +54,6 @@
   align-items: flex-end;
 }
 
-sub {
-  margin-left: -20px;
-  margin-bottom: 7px;
-}
 
 .btn_wrapper {
   display: flex;
