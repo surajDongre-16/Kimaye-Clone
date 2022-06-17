@@ -5,9 +5,6 @@ const initialState={
         loading:false,
         error:false
     },
-    updateItemCount:{
-        count:1
-    },
     cartData:[]
 }
 
@@ -46,15 +43,6 @@ const cartReducer=(state=initialState,action)=>{
                 }
             }
         }
-
-        // case types.CART_DATA_QUANTITY_INCREASE:{
-        //     state.updateItemCount.count++
-        //     return {...state}
-        // }
-        // case types.CART_DATA_QUANTITY_DECREASE:{
-        //     state.updateItemCount.count--
-        //     return {...state}
-        // }
 
         default:{
             return state
