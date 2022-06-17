@@ -19,6 +19,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 import Bag from "../assests/Bag.png";
 import Loc from "../assests/Loc.png";
 import Location from "../pages/Location";
+import LocBtn from "../pages/LocBtn";
 
 const Right_box = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -30,7 +31,7 @@ const Right_box = () => {
         <ul className="ul1">
           <li className="nav-item">
             <div className={navcss.abc}>
-              <Location />
+              <LocBtn />
             </div>
           </li>
         </ul>
@@ -48,7 +49,7 @@ const Right_box = () => {
       </form>
 
       <form className={navcss.btn_wrapper}>
-        <Button
+        <span
           className="btn1"
           ref={btnRef}
           _hover="none"
@@ -56,7 +57,7 @@ const Right_box = () => {
           onClick={onOpen}
         >
           <span className="material-icons bag">person_outline</span>
-        </Button>
+        </span>
         <Drawer
           isOpen={isOpen}
           placement="right"
@@ -81,7 +82,7 @@ const Right_box = () => {
           </DrawerContent>
         </Drawer>
 
-        <Button
+        <span
           className="btn2"
           ref={btnRef}
           _hover="none"
@@ -89,8 +90,8 @@ const Right_box = () => {
           onClick={onOpen}
         >
           <img className={navcss.bag_logo} src={Bag} />
-          <sup>10</sup>
-        </Button>
+       
+        </span><sup>10</sup>
         <Drawer
           isOpen={isOpen}
           placement="right"
