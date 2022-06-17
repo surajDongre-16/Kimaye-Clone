@@ -4,6 +4,7 @@ import navcss from "./navcss.module.css";
 
 import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
 
+
 const Category = () => {
   let cat = [
     {
@@ -51,11 +52,15 @@ const Category = () => {
     },
   ];
 
+
+
+
+
   return (
     <div className={navcss.upper_box}>
       {cat.map((el) => (
         <div className="main_menu" key={el.id}>
-          <Link className="menu-btn" to={el.path}>
+          <Link  className="menu-btn" to={el.path}>
             {el.title}
           </Link>
 

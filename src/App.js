@@ -8,15 +8,23 @@ import Learn from "./pages/Learn";
 import Grow from "./pages/Grow";
 import Location from "./pages/Location";
 import Login from "./pages/Login";
-import { useEffect, useState } from "react";
+
+// import Cart from "./pages/Cart";
+import { useContext, useEffect, useState } from "react";
 import RotateLoader from "react-spinners/RotateLoader";
 import './App.css';
+import LocRequiredAuth from "./hoc/LocRequiredAuth";
+import LocBtn from "./pages/LocBtn";
+import { LocContext } from "./ContextApi/LocationAuth";
+
+
 import Cart from './pages/cart/Cart';
 import Information from './pages/payment-section/Information';
 import Payment from './pages/payment-section/Payment';
 import OrderConfirm from './pages/payment-section/OrderConfirm';
 
-import LocRequiredAuth from "./hoc/LocRequiredAuth";
+
+
 
 
 function App() {
@@ -29,6 +37,10 @@ function App() {
       setLoading(false);
     }, 5000);
   }, []);
+
+
+
+  const {isTry}=useContext(LocContext)
 
   return (
     <div>
@@ -63,10 +75,11 @@ function App() {
           <Navbar />
 
           <Routes>
-            <Route path="/" element={<Shop />} />
-            <Route path="/Learn" element={<Learn />} />
+            <Route path="/" element={ <Shop/>} />
+            <Route path="/Learn" element={<LocRequiredAuth><Learn /></LocRequiredAuth>} />
             <Route path="/Grow" element={<Grow />} />
-            <Route path="/Location" element={<Location />} />
+            <Route path="/LocBtn" element={<LocBtn />} />
+            <Route path="/Location" element={<Location/>}/>
             <Route path="/Login" element={<Login />} />
             {/* <Route path="/Cart" element={<Cart />} /> */}
           </Routes>
