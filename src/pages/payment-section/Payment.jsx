@@ -4,8 +4,10 @@ import styles from "./payament.module.css"
 import { AiFillQuestionCircle } from "react-icons/ai";
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { RiWindowLine } from "react-icons/ri"
+import { useNavigate } from 'react-router-dom';
 
 const Payment = () => {
+    const navigate=useNavigate()
   return (
     <div className={styles.payment_main_box}>
         <Flex>
@@ -75,7 +77,7 @@ const Payment = () => {
                         </Box>
                     </Box>
                     <br />
-                    <Button bg='#437111 ' color='white' size='lg' padding='5% 3%' marginRight='5%' >Complete order</Button>
+                    <Button bg='#437111 ' color='white' size='lg' padding='5% 3%' marginRight='5%' onClick={()=>navigate('/orderconfirm')} >Complete order</Button>
                     <a href='#'>Return to shipping</a>
                     <Divider margin='10% auto 0 ' borderBottom='1px solid rgb(207, 206, 206)' />
                     <Box className={styles.a}>

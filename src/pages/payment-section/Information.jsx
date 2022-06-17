@@ -3,7 +3,9 @@ import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Checkbox, Divi
 import React from 'react'
 import styles from "./payament.module.css"
 import { AiFillQuestionCircle } from "react-icons/ai";
+import { Link, useNavigate } from 'react-router-dom';
 const Information = () => {
+    const navigate=useNavigate()
   return (
     <div className={styles.payment_main_box}>
         <Flex>
@@ -62,11 +64,11 @@ const Information = () => {
                         <Box marginBottom='3%' >
                         <input size='lg' type='checkbox'/> <label>Save this information for next time</label>
                         </Box>
-                        <Button marginRight='5%' colorScheme='green' size='lg'>
-                            Continue to shipping
+                        <Button marginRight='5%' colorScheme='green' size='lg' onClick={()=>navigate('/payment')}>
+                            Continue to shipping 
                         </Button>
                         <a href='#'>return to cart </a>
-    
+                        
                     </form>
                 </Box>  
             </Box>
