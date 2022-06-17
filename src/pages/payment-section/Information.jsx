@@ -1,15 +1,64 @@
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Checkbox, Divider, Flex, FormLabel, Image, Input, Select, Spacer, Text } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from "./payament.module.css"
 import { AiFillQuestionCircle } from "react-icons/ai";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
+import { getCartAPI, saveUserInfo } from '../../store/cart/cart.actions';
+import SelectedProduct from '../../components/SelectedProduct';
+
+
+
 const Information = () => {
     const navigate=useNavigate()
+    const dispatch=useDispatch()
+    const {cartData}=useSelector((state)=>state.cart)
+    const [total,setTotal]=useState()
+    const [userInfo,setUserInfo]=useState({})
+
+    const formData=(e)=>{
+        let {name , value}=e.target
+        setUserInfo({
+            ...userInfo,
+            [name]:value,
+            'total':total
+        })
+
+    }
+
+    const formSubmit=(e)=>{
+        e.preventDefault()
+        localStorage.setItem("userInfo",JSON.stringify(userInfo))
+        // dispatch(saveUserInfo(userInfo))
+        console.log(userInfo)
+    }
+
+
+
+    useEffect(()=>{
+        let totalPrice=0
+        // if(cartData?.length===0){
+          dispatch(getCartAPI())
+          axios.get("http://localhost:8080/cartData")
+          .then((r)=>{
+            setTotal([...r.data])
+    
+            for(let i=0;i<r.data.length;i++){
+              totalPrice=totalPrice+(r.data[i].price * r.data[i].count)
+            }
+            setTotal(totalPrice)
+          })
+          // console.log(totalPrice)
+        // }
+      },[])
+
   return (
     <div className={styles.payment_main_box}>
         <Flex>
-            <Box className={styles.payment_left_box}>
+            <Box className={styles.payment_left_box} h='auto'  >
                 <Box className={styles.payment_left_inner}>
                     <Image src='https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo_250x.png?v=1596288204' marginBottom='2%' />
                     <Breadcrumb spacing='8px' separator={<ChevronRightIcon color='gray.500' fontSize='xs' />}>
@@ -32,10 +81,10 @@ const Information = () => {
                     <br/>
                     <Flex justifyContent='space-between'>
                         <Text fontSize='20px'>Contact information</Text>
-                        <Text>Already have an account? <a href='#'>Log in</a></Text>
+                        <Text display='flex' justifyContent='space-between' w='45%' >Already have an account? <Text cursor='pointer' color='red' onClick={()=>navigate('/login')}>Log in</Text></Text>
                     </Flex>
                     <br/>
-                    <Input size='lg' placeholder='Email' bg='white' marginBottom='3%' outline='1px solid gray' />
+                    <Input size='lg' name='email' placeholder='Email' type='email' onChange={formData}  bg='white' marginBottom='3%' outline='1px solid gray' />
                     <br/>
                     <Checkbox colorScheme='red' defaultChecked>
                         Get order notification and delivery updates
@@ -43,32 +92,34 @@ const Information = () => {
                     <br /><br />
                     <Text fontSize='20px' >Shipping address</Text>
                     <br />
-                    <form>
+                    <form className={styles.form} >
                         <FormLabel fontWeight='100px' htmlFor='country'>Country</FormLabel>
-                        <Select size='lg' id='country' placeholder='Select country' bg='white' marginBottom='3%' outline='1px solid gray' >
+                        <Select size='lg' name='country' id='country' placeholder='Select country' bg='white' marginBottom='3%' outline='1px solid gray' onChange={formData} >
                             <option>India</option>
                         </Select>
                         <Box marginBottom='3%' display='flex' justifyContent='space-between' > 
-                            <Input size='lg' placeholder='First name' w='48%' bg='white' outline='1px solid gray' />
-                            <Input size='lg' placeholder='Last name' w='48%' bg='white' outline='1px solid gray' />
+                            <Input size='lg' name='firstName' placeholder='First name' w='48%' bg='white' outline='1px solid gray' onChange={formData} />
+                            <Input size='lg' name='lastName' placeholder='Last name' w='48%' bg='white' outline='1px solid gray' onChange={formData} />
                         </Box>
-                        <Input size='lg' placeholder='Appartment, suit, etc. (optional)' bg='white' marginBottom='3%' outline='1px solid gray' />
+                        <Input size='lg' name='address' placeholder='Appartment, suit, etc. (optional)' bg='white' marginBottom='3%' outline='1px solid gray' onChange={formData} />
                         <Flex justifyContent='space-between'  marginBottom='3%'> 
-                            <Input size='lg' w='32%' placeholder='City' bg='white' outline='1px solid gray' />
-                            <Select id='state' placeholder='Select state' w='32%' bg='white' outline='1px solid gray' >
+                            <Input size='lg' w='32%' name='city' placeholder='City' bg='white' outline='1px solid gray' onChange={formData} />
+                            <Select id='state' name='state' placeholder='Select state' w='32%' bg='white' outline='1px solid gray' onChange={formData} >
                                 <option>Maharashtra</option>
+                                <option>Delhi</option>
                             </Select>
-                            <Input size='lg' w='32%' placeholder='PIN code' bg='white' outline='1px solid gray' />
+                            <Input size='lg' w='32%' name='pincode' placeholder='PIN code' bg='white' outline='1px solid gray' onChange={formData} />
                         </Flex>
-                        <Input size='lg' placeholder='Mobile number for order and delivery updates ' bg='white'  marginBottom='3%' outline='1px solid gray' />
+                        <Input size='lg' name='mobileNo' placeholder='Mobile number for order and delivery updates ' bg='white'  marginBottom='3%' outline='1px solid gray' onChange={formData} />
                         <Box marginBottom='3%' >
-                        <input size='lg' type='checkbox'/> <label>Save this information for next time</label>
+                            <input size='lg' type='checkbox' onChange={formSubmit} /> <label>Save this information for next time</label>
                         </Box>
-                        <Button marginRight='5%' colorScheme='green' size='lg' onClick={()=>navigate('/payment')}>
-                            Continue to shipping 
-                        </Button>
-                        <a href='#'>return to cart </a>
-                        
+                        <Box display='flex' alignItems='center' >
+                            <Button marginRight='5%' colorScheme='green' size='lg' onClick={()=>navigate('/shipping')}>
+                                Continue to shipping 
+                            </Button>
+                            <Text color='red' cursor='pointer' onClick={()=>navigate('/cart')} >Return to Cart </Text>
+                        </Box>
                     </form>
                 </Box>  
             </Box>
@@ -78,42 +129,7 @@ const Information = () => {
 
             <Box>
                 <Box margin='15%' w='130%' >
-                    <Flex justifyContent='space-between' alignItems='center'>
-                        <Image border='1px solid gray' borderRadius='10px' w='70px' h='70px' src='https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Cherry-funfact_7d4aa6ea-115e-4114-883b-997e64bf56e1_small.png?v=1625033775'/>
-                        <Flex flexDirection='column' paddingLeft='3%'>
-                            <Text fontSize='15px' >Kimaye Cherries (Indian) (250g)</Text>
-                            <Text fontSize='15px'>250g / Mumbai</Text>
-                        </Flex>
-                        <Spacer/>
-                        <Text> ₹500</Text>
-                    </Flex>
-                    <br />
-                    <Divider borderBottom='1px solid rgb(207, 206, 206)' />
-                    <br/>
-                    <Box display="flex" justifyContent='space-between' >
-                        <Input fontSize='20px' placeholder='Gift card or discount code' w='70%' />
-                        <Button bg='rgb(199, 199, 199)' color='white' fontSize='20px' >Apply</Button>
-                    </Box>
-                    <br/>
-                    <Divider borderBottom='1px solid rgb(207, 206, 206)'   />
-                    <br/>
-                    <Box color='gray'>
-                        <Flex justifyContent='space-between' marginBottom='3%'  >
-                            <Text>Subtotal</Text>
-                            <Text color='black' >₹200</Text>
-                        </Flex>
-                        <Flex justifyContent='space-between'>
-                            <Text display='flex' alignItems='center' justifyContent='space-between' w='20%'>Shipping <AiFillQuestionCircle/></Text>
-                            <Text fontSize='14px' >Free above Rs 300</Text>
-                        </Flex>
-                    </Box>
-                    <br />
-                    <Divider borderBottom='1px solid rgb(207, 206, 206)'/>
-                    <br />
-                    <Flex justifyContent='space-between'>
-                        <Text fontSize='20px'>Total</Text>
-                        <Text display='flex' justifyContent='space-between' alignItems='center' w='20%'><Text color='gray' fontSize='14px' >INR</Text> <Text fontSize='20px' >₹204</Text> </Text>
-                    </Flex>
+                    <SelectedProduct/>
                 </Box>
             </Box>
         </Flex>

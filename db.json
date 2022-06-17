@@ -1,160 +1,132 @@
 {
-    "Blogs":[
-        {
-            "post-date-day":24,
-            "post-date-month":"Jul",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/top-fruit-safety-tips-you-should-be-swearing-by-every-time-you-consume-them",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/AdobeStock_334275008-2-opt2-1900px_50x50.jpg?v=1627119119",
-            "entry-title":"Top Fruit Safety Tips You Should Be Swearing By Every Time You Consume Them .",
-            "entry-content":"Fresh fruits bring with them a horde of health benefits, but it’s the way we consume them that is more important. While fruits have the ability to prevent many diseases such as cancer, heart stroke,...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/top-fruit-safety-tips-you-should-be-swearing-by-every-time-you-consume-them"
-        },
-        {
-            "post-date-day":19,
-            "post-date-month":"Jul",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/fruits-rich-in-vitamin-c-that-you-should-be-eating-everyday",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/AdobeStock_201343750_copy__66kb-1000px_50x50.jpg?v=1626676701",
-            "entry-title":"Fruits Rich In Vitamin C That You Should Be Eating Everyday",
-            "entry-content":"Remember the times when our mothers used to chase us every day with a bowl of fruits when we were kids. Well, she had pretty good reasons behind doing the same. Fruits, especially the ones...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/fruits-rich-in-vitamin-c-that-you-should-be-eating-everyday"
-        },
-        {
-            "post-date-day":"07",
-            "post-date-month":"Jul",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/how-to-remove-and-clean-harmful-pesticides-from-fruits",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/AdobeStock_77286816-min__1625567830_114.143.85.97_50x50.jpg?v=1625638895",
-            "entry-title":"How To Remove And Clean Harmful Pesticides From Fruits",
-            "entry-content":"Summers have arrived and so have the days where we can soak ourselves in the pleasure of treating ourselves to delicious fruits like mangoes, water melons, grapes and so on. After all, aside of helping...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/how-to-remove-and-clean-harmful-pesticides-from-fruits"
-        },
-        {
-            "post-date-day":"01",
-            "post-date-month":"Jul",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/why-should-you-eat-fruits-more-often",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/Blog_-_Benefits_of_fruits_50x50.jpg?v=1625147388",
-            "entry-title":"Why Should You Eat Fruits More Often?",
-            "entry-content":"David Thoreau once stated, “Live in each season as it passes: breathe the air, drink the drink, taste the seasonal fruit.” Rings true as, the more we tend to treat our cravings with junk and...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/why-should-you-eat-fruits-more-often"
-        },
-        {
-            "post-date-day":12,
-            "post-date-month":"Feb",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/grapes-how-they-reached-india-types-and-health-benefits",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/Untitled_design_51-min_50x50.png?v=1614341965",
-            "entry-title":"Grapes: How they reached India, types and health benefits",
-            "entry-content":"Grapes are one of the most diverse and devoured fruits in India. Known for its sweet flavours and nutrients, grapes are hard to ignore. They come in various types and are carefully nurtured into fresh...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/grapes-how-they-reached-india-types-and-health-benefits"
-        },
-        {
-            "post-date-day":10,
-            "post-date-month":"Nov",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/make-immunity-your-best-friend",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/immune_system_1728x-min_50x50.jpg?v=1614342193",
-            "entry-title":"Make Immunity your Best Friend",
-            "entry-content":"Immunity in the New Normal The pandemic’s biggest mystery is our immune system. But, do we really understand how it functions? In simple terms, it’s your body’s armour against illnesses. The immune system also aids...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/make-immunity-your-best-friend"
-        },
-        {
-            "post-date-day":"05",
-            "post-date-month":"Oct",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/nourish-yourself-with-these-fruitful-nutrients",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/pomegranate-min_50x50.jpg?v=1614342435",
-            "entry-title":"Nourish yourself with these 'fruitful' nutrients",
-            "entry-content":"October 5, 2020 (IANSlife) “Yatha Annam Tatha Mannam,” Prime Minister Narendra Modi recalled the maxim during his ‘Mann ki Baat session’ a few days back, which signifies that’ mental and intellectual development is directly related to...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/nourish-yourself-with-these-fruitful-nutrients"
-        },
-        {
-            "post-date-day":28,
-            "post-date-month":"Sep",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/healthy-at-heart",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/healthy_heart-min_50x50.jpg?v=1614342271",
-            "entry-title":"Healthy at Heart",
-            "entry-content":"September 28, 2020 (IANSlife) This World Heart Day, let’s have a light-hearted conversation about the importance of having a healthy heart and how one should take care of it.  Being aware of cardiovascular diseases and measures...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/healthy-at-heart"
-        },
-        {
-            "post-date-day":14,
-            "post-date-month":"Aug",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/craving-for-something-delicious-during-the-lockdown-we-got-you",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/craving_blog-min_50x50.jpg?v=1614342502",
-            "entry-title":"Craving for Something Delicious During the Lockdown? We Got You!",
-            "entry-content":"We know that you’ve been spending your time working from home and being committed to your fitness goals. But, what about those cravings that sneak up on you once in a while? Well, we are...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/craving-for-something-delicious-during-the-lockdown-we-got-you"
-        },
-        {
-            "post-date-day":"03",
-            "post-date-month":"Aug",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/a-fruitful-monsoon-diet",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/pomegranate-1-min_50x50.jpg?v=1614342545",
-            "entry-title":"A fruitful monsoon diet",
-            "entry-content":"August 3, 2020 (IANSlife) Monsoon demands some extra effort to stay fit and healthy. Since our immunity takes a dip during monsoons, making us susceptible to all kinds of infections. Especially amidst the Coronavirus pandemic, it’s...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/a-fruitful-monsoon-diet"
-        },
-        {
-            "post-date-day":"08",
-            "post-date-month":"Jun",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/do-fruits-have-a-time-table",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/consume_fruits-min_50x50.jpg?v=1614598062",
-            "entry-title":"Do fruits have a time table",
-            "entry-content":"The right time to consume fruits Fruits are known to be an essential source of vitamins and minerals, and an excellent way to improve your overall health. Not just that, if you keep on consuming...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/do-fruits-have-a-time-table"
-        },
-        {
-            "post-date-day":17,
-            "post-date-month":"May",
-            "db href":"https://kimaye.com/blogs/grow-with-kimaye/meet-your-health-goals-during-the-lockdown",
-            "article__grid-image src":"https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/working_out_at_home-min_50x50.jpg?v=1614598096",
-            "entry-title":"Meet your health goals during the lockdown",
-            "entry-content":"May 17, 2020 (IANSlife) \"Work from Home\" during quarantine has changed our lifestyles; keeping a check on nutrition can be tough when our home is our office.   Unlike at the office, here we have plenty of packed...",
-            "social-email href":"mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/meet-your-health-goals-during-the-lockdown"
-        }
-    ],
-    "cartData":[
-        {
-            "id":1,
-            "item_img":"https://cdn.shopify.com/s/files/1/0449/5225/6667/products/litchi--_-keasr_219x.progressive.jpg?v=1654850892",
-            "item_name":"Kimaye Litchi-Kesar Combo",
-            "item__weight": "(500 g + 3 pcs)",
-            "item_price": 275,
-            "item_quantity": 1,
-            "total_price": 275
-
-        },
-        {
-            "id":2,
-            "item_img":"https://cdn.shopify.com/s/files/1/0449/5225/6667/products/litchi--_-keasr_219x.progressive.jpg?v=1654850892",
-            "item_name":"Kimaye Litchi-Kesar Combo",
-            "item__weight": "(500 g + 3 pcs)",
-            "item_price": 275,
-            "item_quantity": 1,
-            "total_price": 275
-
-        }
-    ],
-    "userDetails":[
-        {
-            "user_email":"surajdongre8@gmail.com",
-            "user_address":"Near Manwatkar Hospital, Ekori ward",
-            "user_city":"Chandrapur",
-            "user_state":"Maharashtra",
-            "user_pincode":"442401",
-            "user_no":123456789
-        }
-    ]
+  "Blogs": [
+    {
+      "post-date-day": 24,
+      "post-date-month": "Jul",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/top-fruit-safety-tips-you-should-be-swearing-by-every-time-you-consume-them",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/AdobeStock_334275008-2-opt2-1900px_50x50.jpg?v=1627119119",
+      "entry-title": "Top Fruit Safety Tips You Should Be Swearing By Every Time You Consume Them .",
+      "entry-content": "Fresh fruits bring with them a horde of health benefits, but it’s the way we consume them that is more important. While fruits have the ability to prevent many diseases such as cancer, heart stroke,...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/top-fruit-safety-tips-you-should-be-swearing-by-every-time-you-consume-them"
+    },
+    {
+      "post-date-day": 19,
+      "post-date-month": "Jul",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/fruits-rich-in-vitamin-c-that-you-should-be-eating-everyday",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/AdobeStock_201343750_copy__66kb-1000px_50x50.jpg?v=1626676701",
+      "entry-title": "Fruits Rich In Vitamin C That You Should Be Eating Everyday",
+      "entry-content": "Remember the times when our mothers used to chase us every day with a bowl of fruits when we were kids. Well, she had pretty good reasons behind doing the same. Fruits, especially the ones...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/fruits-rich-in-vitamin-c-that-you-should-be-eating-everyday"
+    },
+    {
+      "post-date-day": "07",
+      "post-date-month": "Jul",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/how-to-remove-and-clean-harmful-pesticides-from-fruits",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/AdobeStock_77286816-min__1625567830_114.143.85.97_50x50.jpg?v=1625638895",
+      "entry-title": "How To Remove And Clean Harmful Pesticides From Fruits",
+      "entry-content": "Summers have arrived and so have the days where we can soak ourselves in the pleasure of treating ourselves to delicious fruits like mangoes, water melons, grapes and so on. After all, aside of helping...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/how-to-remove-and-clean-harmful-pesticides-from-fruits"
+    },
+    {
+      "post-date-day": "01",
+      "post-date-month": "Jul",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/why-should-you-eat-fruits-more-often",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/Blog_-_Benefits_of_fruits_50x50.jpg?v=1625147388",
+      "entry-title": "Why Should You Eat Fruits More Often?",
+      "entry-content": "David Thoreau once stated, “Live in each season as it passes: breathe the air, drink the drink, taste the seasonal fruit.” Rings true as, the more we tend to treat our cravings with junk and...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/why-should-you-eat-fruits-more-often"
+    },
+    {
+      "post-date-day": 12,
+      "post-date-month": "Feb",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/grapes-how-they-reached-india-types-and-health-benefits",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/Untitled_design_51-min_50x50.png?v=1614341965",
+      "entry-title": "Grapes: How they reached India, types and health benefits",
+      "entry-content": "Grapes are one of the most diverse and devoured fruits in India. Known for its sweet flavours and nutrients, grapes are hard to ignore. They come in various types and are carefully nurtured into fresh...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/grapes-how-they-reached-india-types-and-health-benefits"
+    },
+    {
+      "post-date-day": 10,
+      "post-date-month": "Nov",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/make-immunity-your-best-friend",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/immune_system_1728x-min_50x50.jpg?v=1614342193",
+      "entry-title": "Make Immunity your Best Friend",
+      "entry-content": "Immunity in the New Normal The pandemic’s biggest mystery is our immune system. But, do we really understand how it functions? In simple terms, it’s your body’s armour against illnesses. The immune system also aids...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/make-immunity-your-best-friend"
+    },
+    {
+      "post-date-day": "05",
+      "post-date-month": "Oct",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/nourish-yourself-with-these-fruitful-nutrients",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/pomegranate-min_50x50.jpg?v=1614342435",
+      "entry-title": "Nourish yourself with these 'fruitful' nutrients",
+      "entry-content": "October 5, 2020 (IANSlife) “Yatha Annam Tatha Mannam,” Prime Minister Narendra Modi recalled the maxim during his ‘Mann ki Baat session’ a few days back, which signifies that’ mental and intellectual development is directly related to...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/nourish-yourself-with-these-fruitful-nutrients"
+    },
+    {
+      "post-date-day": 28,
+      "post-date-month": "Sep",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/healthy-at-heart",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/healthy_heart-min_50x50.jpg?v=1614342271",
+      "entry-title": "Healthy at Heart",
+      "entry-content": "September 28, 2020 (IANSlife) This World Heart Day, let’s have a light-hearted conversation about the importance of having a healthy heart and how one should take care of it.  Being aware of cardiovascular diseases and measures...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/healthy-at-heart"
+    },
+    {
+      "post-date-day": 14,
+      "post-date-month": "Aug",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/craving-for-something-delicious-during-the-lockdown-we-got-you",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/craving_blog-min_50x50.jpg?v=1614342502",
+      "entry-title": "Craving for Something Delicious During the Lockdown? We Got You!",
+      "entry-content": "We know that you’ve been spending your time working from home and being committed to your fitness goals. But, what about those cravings that sneak up on you once in a while? Well, we are...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/craving-for-something-delicious-during-the-lockdown-we-got-you"
+    },
+    {
+      "post-date-day": "03",
+      "post-date-month": "Aug",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/a-fruitful-monsoon-diet",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/pomegranate-1-min_50x50.jpg?v=1614342545",
+      "entry-title": "A fruitful monsoon diet",
+      "entry-content": "August 3, 2020 (IANSlife) Monsoon demands some extra effort to stay fit and healthy. Since our immunity takes a dip during monsoons, making us susceptible to all kinds of infections. Especially amidst the Coronavirus pandemic, it’s...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/a-fruitful-monsoon-diet"
+    },
+    {
+      "post-date-day": "08",
+      "post-date-month": "Jun",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/do-fruits-have-a-time-table",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/consume_fruits-min_50x50.jpg?v=1614598062",
+      "entry-title": "Do fruits have a time table",
+      "entry-content": "The right time to consume fruits Fruits are known to be an essential source of vitamins and minerals, and an excellent way to improve your overall health. Not just that, if you keep on consuming...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/do-fruits-have-a-time-table"
+    },
+    {
+      "post-date-day": 17,
+      "post-date-month": "May",
+      "db href": "https://kimaye.com/blogs/grow-with-kimaye/meet-your-health-goals-during-the-lockdown",
+      "article__grid-image src": "https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/working_out_at_home-min_50x50.jpg?v=1614598096",
+      "entry-title": "Meet your health goals during the lockdown",
+      "entry-content": "May 17, 2020 (IANSlife) \"Work from Home\" during quarantine has changed our lifestyles; keeping a check on nutrition can be tough when our home is our office.   Unlike at the office, here we have plenty of packed...",
+      "social-email href": "mailto:?subject=Check%20this%20https://kimaye.com/blogs/grow-with-kimaye/meet-your-health-goals-during-the-lockdown"
+    }
+  ],
+  "cartData": [
+    {
+      "id": 2,
+      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/litchi--_-keasr_219x.progressive.jpg?v=1654850892",
+      "name": "Kimaye Litchi-Kesar Combo",
+      "weight": "(500 g + 3 pcs)",
+      "price": 40,
+      "count": 6
+    }
+  ],
+  "userDetails": [
+    {
+      "user_email": "surajdongre8@gmail.com",
+      "user_address": "Near Manwatkar Hospital, Ekori ward",
+      "user_city": "Chandrapur",
+      "user_state": "Maharashtra",
+      "user_pincode": "442401",
+      "user_no": 123456789
+    }
+  ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
