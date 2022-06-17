@@ -1,9 +1,10 @@
 
+.btn{
+   border:0;
+   cursor: pointer;
 
-.btn:focus{
-    /* border: 1px solid red; */
- 
 }
+
 
 
 .shopping{
@@ -24,7 +25,7 @@
 }
 
 .pin{
-    width:50%;
+    width:53%;
     height: 40px;
     padding-left: 15px;
     margin-left: 25%;

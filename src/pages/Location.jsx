@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import {
   Modal,
   ModalOverlay,
@@ -13,90 +13,24 @@ import {
 import Loc from "../assests/Loc.png";
 import Loca from "./Loca.module.css";
 import { useNavigate } from "react-router-dom";
-
-
-
+import { LocContext } from "../ContextApi/LocationAuth";
 
 const Location = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [size, setSize] = useState("2000px");
-
-  const handleSizeClick = (newSize) => {
-    setSize(newSize);
-    onOpen();
-  };
-
-  const [pin, setPin] = useState("");
-  const [sendPin,setSendPin]=useState([])
-
-  const navigate=useNavigate()
-
-
-  const ref = useRef();
-
-  const handleClick = () => {
-    if (!pin) {
-      ref.current.focus();
-    }
-  
-    fetch(`https://api.postalpincode.in/pincode/${pin}`)
-      .then((res) => res.json())
-      .then((data) => {
-       
-     
-        if (data[0].PostOffice[0].Circle == "Delhi"){
-          setPin(data[0].PostOffice[0].Circle);
-          window.localStorage.setItem("Pincode",JSON.stringify(data[0].PostOffice[0].Circle))
-          console.log(data[0].PostOffice[0].Circle);
-          onClose()
-          
-        } else if (data[0].PostOffice[0].District == "Mumbai"  ) {
-          setPin(data[0].PostOffice[0].District);
-          window.localStorage.setItem("Pincode",JSON.stringify(data[0].PostOffice[0].District))
-          console.log(data[0].PostOffice[0].District);
-          onClose()
-        }
-        
-         else {
-          setPin("");
-          alert("Sorry! We do not deliver to your Pincode currently.Showing you results for Delhi & Mumbai.");
-        }
-      });
-
-     
-  };
-
-  
-  useEffect(()=>{
-
-     const pinData=window.localStorage.getItem("Pincode")
-     if ( pinData !==null ) setPin(JSON.parse(pinData));
-     console.log(pinData)
-  },[])
-
-
-
+  const {
+    handleClick,
+    isOpen,
+    onOpen,
+    onClose,
+    size,
+    setSize,
+    pin,
+    setPin,
+    ref,
+    isTry,
+  } = useContext(LocContext);
 
   return (
     <div>
-      <Button
-        className={Loca.btn}
-        onClick={() => handleSizeClick(size)}
-        key={size}
-        m={4}
-        _hover="none"
-        bg="rgb(236,236,236)"
-      >
-        {
-          <div>
-            <img className={Loca.loc_logo} src={Loc} />
-            <sub>
-              <b>{ pin}</b>
-            </sub>
-          </div>
-        }
-      </Button>
-
       <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent className={Loca.modal}>
@@ -117,7 +51,6 @@ const Location = () => {
               placeholder="Enter Pincode..."
               maxLength={6}
               onChange={(e) => setPin(e.target.value)}
-              
             />
           </div>
 
@@ -129,10 +62,8 @@ const Location = () => {
               colorScheme="blue"
               className={Loca.btn1}
               onClick={handleClick}
-              
             >
               Done
-             
             </Button>
           </ModalFooter>
         </ModalContent>
