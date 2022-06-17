@@ -23,7 +23,7 @@ export const LocProvider = ({ children }) => {
     fetch(`https://api.postalpincode.in/pincode/${pin}`)
       .then((res) => res.json())
       .then((data) => {
-        if (data[0].PostOffice[0].Circle == "Delhi") {
+        if (data[0].PostOffice[0].Circle === "Delhi") {
           setIsTry(true);
           setPin(data[0].PostOffice[0].Circle);
           window.localStorage.setItem(
@@ -38,7 +38,7 @@ export const LocProvider = ({ children }) => {
           } else {
             navigate("/");
           }
-        } else if (data[0].PostOffice[0].District == "Mumbai") {
+        } else if (data[0].PostOffice[0].District === "Mumbai") {
           setIsTry(true);
           setPin(data[0].PostOffice[0].District);
           window.localStorage.setItem(
@@ -53,12 +53,19 @@ export const LocProvider = ({ children }) => {
             navigate("/");
           }
         } else {
-          setIsTry(false);
-          setPin("");
+         
+        
           alert(
-            "Sorry! We do not deliver to your Pincode currently.Showing you results for Delhi & Mumbai."
+            "Sorry! We do not deliver to your Pincode currently.Showing you results for Delhi."
           );
-          navigate(state.from, { replace: true });
+          setPin("Delhi");
+          setIsTry(true);
+          onClose();
+          if (state) {
+            navigate(state.from, { replace: true });
+          } else {
+            navigate("/");
+          }
         }
       });
   };
