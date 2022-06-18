@@ -24,7 +24,6 @@ const Cart = () => {
   const dispatch=useDispatch()
   const {cartData}=useSelector((state)=>state.cart)
   const incrementQuantity=(data)=>{
-    console.log(data)
     const updatedData={
       "id": data.id,
       "image": data.image,
@@ -33,7 +32,7 @@ const Cart = () => {
       "price": data.price,
       "count": data.count+1
     }
-    // console.log(updatedData)
+    
     dispatch(additem(updatedData))
     setTrig(!trig)
   }
@@ -48,7 +47,7 @@ const Cart = () => {
       "price": data.price,
       "count": data.count-1
     }
-    // console.log(updatedData)
+  
     dispatch(removeitem(updatedData))
     setTrig(!trig)
 

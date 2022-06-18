@@ -663,6 +663,14 @@
   ],
   "cart-data": [
     {
+      "id": 1,
+      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Dasheri_360x.jpg?v=1623855977",
+      "name": "Kimaye Dasheri Mangoes (Pack of 3,6 &12)",
+      "price": 350,
+      "weight": "Weight  :  1 kg",
+      "count": 1
+    },
+    {
       "id": 2,
       "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Cherry--_-blueberry_360x.jpg?v=1654851019",
       "name": "Kimaye Cherry- Blueberry Combo",
@@ -671,19 +679,28 @@
       "count": 1
     },
     {
-      "id": 24,
-      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/peach--_-litchi_360x.jpg?v=1654850921",
-      "name": "Kimaye Litchi -Peach Combo",
-      "price": 277,
-      "count": 3
+      "id": 3,
+      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Lychee_360x.jpg?v=1622208039",
+      "name": "Kimaye Litchi(500g)",
+      "price": 275,
+      "weight": "Weight  :  500 g",
+      "count": 1
     },
     {
-      "id": 1,
-      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Dasheri_360x.jpg?v=1623855977",
-      "name": "Kimaye Dasheri Mangoes (Pack of 3,6 &12)",
-      "price": 350,
-      "count": 5
-
+      "id": 5,
+      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/FL-Sharad_Combo_360x.png?v=1652163520",
+      "name": "Kimaye Sharad - Flame Grapes Combo",
+      "price": 333,
+      "weight": "Weight  :  1 kg",
+      "count": 1
+    },
+    {
+      "id": 17,
+      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/peach--_-Plum_360x.jpg?v=1654851067",
+      "name": "Kimaye Plum-Peach Combo",
+      "price": 120,
+      "weight": "Weight  :  1 kg",
+      "count": 1
     }
   ]
 }
