@@ -48,6 +48,7 @@ function App() {
         </div>
       ) : (
         <div>
+       
           <Navbar />
 
           <Routes>
@@ -59,6 +60,8 @@ function App() {
             <Route path="/Login" element={<Login />} />
             {/* <Route path="/Cart" element={<Cart />} /> */}
           </Routes>
+
+        
         </div>
       )}
     </div>

@@ -59,6 +59,10 @@ export const LocProvider = ({ children }) => {
             "Sorry! We do not deliver to your Pincode currently.Showing you results for Delhi."
           );
           setPin("Delhi");
+          window.localStorage.setItem(
+            "Pincode",
+            JSON.stringify("Delhi")
+          );
           setIsTry(true);
           onClose();
           if (state) {
