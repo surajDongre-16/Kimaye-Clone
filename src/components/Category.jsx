@@ -33,7 +33,7 @@ const Category = () => {
     {
       id: 2,
       title: "LEARN",
-      path: "/Learn",
+      path: "/",
       sub: {
         a: "Our Story",
         p1: "/our-story",

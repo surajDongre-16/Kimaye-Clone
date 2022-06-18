@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import { useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Routes, Route, Link } from "react-router-dom";
@@ -12,7 +12,7 @@ import Login from "./pages/Login";
 // import { useEffect, useState } from "react";
 // import RotateLoader from "react-spinners/RotateLoader";
 
-import { useContext } from "react";
+// import { useContext, useEffect, useState } from "react";
 import RotateLoader from "react-spinners/RotateLoader";
 
 import "./App.css";
@@ -37,6 +37,8 @@ import Products from './FruitsPage/Products';
 import LocRequiredAuth from "./hoc/LocRequiredAuth"
 import Blog from "./pages/Blog";
 import OurStory from "./pages/OurStory";
+import Product from "./FruitsPage/Product";
+// import LocRequiredAuth from "./hoc/LocRequiredAuth";
 
 
 function App() {
@@ -93,6 +95,7 @@ function App() {
             <Route path="/razorpay" element={<RazorPay />} />
             <Route path="/orderconfirm" element={<OrderConfirm />} />
             <Route path='/allfruits' element={<AllFruits />}></Route>
+            <Route path="/allfruits/:id" element={<Product />} />
             <Route path='/freshcuts' element={<FreshCuts />}></Route>
             <Route path='/fruitcombos' element={<FruitCombos />}></Route>
             <Route path='/gifts' element={<Gifts />}></Route>
