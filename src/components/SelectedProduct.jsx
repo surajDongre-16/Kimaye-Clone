@@ -3,7 +3,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { AiFillQuestionCircle } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCartAPI } from '../store/cart/cart.actions'
+import { additem, getCartAPI } from '../store/cart/cart.actions'
 
 const SelectedProduct = () => {
     const {cartData}=useSelector((state)=>state.cart)
@@ -30,6 +30,7 @@ const SelectedProduct = () => {
         else{
             setDiscount("error")
         }
+
         
     }
  

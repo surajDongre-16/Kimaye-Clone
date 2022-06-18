@@ -18,7 +18,7 @@ import OrderConfirm from './pages/payment-section/OrderConfirm';
 import LocRequiredAuth from "./hoc/LocRequiredAuth";
 import { Button } from "@chakra-ui/react";
 import Shipping from "./pages/payment-section/Shipping";
-
+import RazorPay from "./pages/payment-section/RazorPay";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -31,10 +31,10 @@ function App() {
     }, 5000);
   }, []);
 
-  return (
-    <div>     
-    
+  const { isTry } = useContext(LocContext);
 
+  return (
+    <div>
       {loading ? (
         <div className="App">
           <div className="App_inner">
@@ -48,26 +48,50 @@ function App() {
         </div>
       ) : (
         <div>
-            <Navbar/>
-            <Routes>
-             <Route path="/" element={<Shop/>}/>
-             <Route path="/Learn" element={<Learn/>}/>
-             <Route path="/Grow" element={<Grow/>}/>
-             <Route path="/Location" element={<Location/>}/>
-             <Route path="/Login" element={<Login/>}/>
-             <Route path='/cart' element={<Cart/>} />
-             <Route path='/information' element={<Information/>} />
-             <Route path='/shipping' element={<Shipping/>} />
-             <Route path='/payment' element={<Payment/>} />
-             <Route path='/orderconfirm' element={<OrderConfirm/>} />
-            </Routes>
 
-             <Button><Link to='/cart'>cart page</Link></Button>
-
+          <Navbar />
+         
+          <Routes>
+            <Route path="/" element={<Shop />} />
+            <Route
+              path="/Learn"
+              element={
+                <LocRequiredAuth>
+                  <Learn />
+                </LocRequiredAuth>
+              }
+            />
+            <Route path="/our-story" element={<OurStory />} />
+            <Route path="/Grow" element={<Grow />} />
+            <Route path="/Grow/:id" element={<Blog />} />
+            <Route path="/Location" element={<Location />} />
+            <Route path="/LocBtn" element={<LocBtn />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/information" element={<Information />} />
+            <Route path="/shipping" element={<Shipping />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path='/razorpay' element={<RazorPay/>} />
+            <Route path="/orderconfirm" element={<OrderConfirm />} />
+            <Route path='/allfruits' element={<AllFruits />}></Route>
+            <Route path='/freshcuts' element={<FreshCuts />}></Route>
+            <Route path='/fruitcombos' element={<FruitCombos />}></Route>
+            <Route path='/gifts' element={<Gifts />}></Route>
+            <Route path='/products' element={<Products />} />
+          </Routes>
+          {/* //{" "}
+          <Button>
+            <Link to="/cart">cart page</Link>
+          </Button> */}
+         
         </div>
       )}
+      ;
     </div>
   );
 }
 
 export default App;
+
+        
+

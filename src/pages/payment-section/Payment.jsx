@@ -80,7 +80,8 @@ const Payment = () => {
                     </Box>
                     <br />
                     <Box display='flex' alignItems='center' >
-                        <Button bg='#437111 ' color='white' size='lg' padding='5% 3%' marginRight='5%' onClick={()=>navigate('/orderconfirm')} >Complete order</Button>
+                        <Button bg='#437111 ' color='white' size='lg' padding='5% 3%'
+                         marginRight='5%' onClick={()=>navigate('/razorpay')} >Complete order</Button>
                         <Text color='red' onClick={()=>navigate('/shipping')}>Return to shipping</Text>
                     </Box>
                     <Divider margin='10% auto 0 ' borderBottom='1px solid rgb(207, 206, 206)' />
