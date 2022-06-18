@@ -36,7 +36,7 @@ const Category = () => {
       path: "/Learn",
       sub: {
         a: "Our Story",
-        p1: "/Learn",
+        p1: "/our-story",
         b: "Why Kimaye",
         p2: "/",
         c: "Traceability",

@@ -1,0 +1,309 @@
+#ourStory {
+  margin-top: -40px;
+}
+
+.banner {
+  margin-top: -5px;
+  background-size: cover;
+}
+.div_display_flex {
+  justify-content: center;
+  align-items: center;
+}
+.w70 {
+  width: 70%;
+  margin: auto;
+}
+.heading_section {
+  color: #222;
+  text-transform: uppercase;
+  line-height: 1.2;
+  word-spacing: 5px;
+  font-family: "Caveat Brush", cursive;
+}
+.para_text_section {
+  font-family: PT Sans, sans-serif;
+  font-size: 25px;
+  margin: 0;
+  line-height: 1.3;
+  color: #222;
+}
+.small_para_text_section {
+  font-size: 22px;
+  font-weight: lighter;
+  color: #222;
+}
+.brand_section {
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+.brand_box {
+  width: 20%;
+  text-align: center;
+}
+.brand_box img {
+  width: 100%;
+}
+.brand_box p {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #222;
+  padding-top: 10px;
+}
+.safest_fruits_section {
+  background-image: url("https://cdn.shopify.com/s/files/1/0449/5225/6667/files/yellow_bg.jpg?v=1600154659");
+  background-size: cover;
+  /* background-position: center; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  position: relative;
+}
+.lazyloaded {
+  opacity: 1;
+}
+.lazyload,
+.lazyloading {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.trust_section {
+  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/gray_bg.jpg?v=1600154658);
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  position: relative;
+}
+.safest_fruits_para_text {
+  font-family: PT Sans, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #222;
+}
+.red_text {
+  color: red;
+}
+.success_story_section {
+  background-image: url("https://cdn.shopify.com/s/files/1/0449/5225/6667/files/gray_bg_01.jpg?v=1600154658");
+  background-size: cover;
+  background-position: center;
+  padding: 49px 0;
+  position: relative;
+}
+.success_story_section .grass {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.story_heading {
+  text-align: center;
+}
+.success_story_section .story_heading .success_heading {
+  display: inline-block;
+}
+.heading_section h2 {
+  color: #222;
+  font-family: "Caveat Brush", cursive;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.success_story_section .story_heading .success_heading .green {
+  margin: 0 -60px -12px auto;
+}
+.text_center {
+  text-align: center;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.success_story_section .pdng_left_right {
+  padding: 0 60px;
+}
+.success_story_section .story_mrgn_top {
+  margin-top: 80px;
+}
+.success_story_section .pdng_left_right .pdng_left {
+  padding-left: 50px;
+}
+.success_story_section .pdng_left_right .pdng_right {
+  padding-right: 50px;
+}
+.success_story_section .right-arrow {
+  margin: 0 0 0 auto;
+}
+.success_story_section .left-arrow {
+  margin: 0 auto 0 0;
+}
+.story-img {
+  position: relative;
+}
+.story-img .story_1 {
+  bottom: 60px;
+  right: 95px;
+}
+.shot_on_location_txt {
+  font-size: 15px;
+  position: absolute;
+  color: #fff;
+  margin: 0;
+  text-shadow: 1px 1px #4c4c4c;
+  font-weight: 800;
+}
+.success_story_section .story_pdng_btm {
+  padding-bottom: 20px;
+}
+.success_story_section .factory_story {
+  margin-top: 0;
+}
+.success_story_section .row_reverse {
+  flex-direction: row-reverse;
+}
+.success_story_section .IIT_div {
+  align-self: flex-end;
+}
+.story-img .story_2 {
+  bottom: 40px;
+  right: 15px;
+}
+.story-img .story_4 {
+  bottom: 10px;
+  right: 35%;
+}
+.founder_section {
+  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/green_bg.png?v=1600154659);
+  background-size: cover;
+  /* background-position: center; */
+  width: 100%;
+  overflow: hidden;
+  padding-top: 49px;
+  padding-bottom: 50px;
+  position: relative;
+}
+.founder_section .founder_heading {
+  padding-bottom: 30px;
+}
+.owl-carousel {
+  width: 50%;
+  margin: auto;
+}
+.item {
+  border: 1px solid #72954c;
+  position: relative;
+}
+.item-img {
+  position: absolute;
+  top: 5px;
+  left: 8%;
+}
+.inside {
+  background-color: #fff;
+  width: 90%;
+  margin: auto;
+  border-radius: 15px;
+  padding: 20px;
+  padding-top: 50px;
+  margin-top: 60px;
+}
+.founder_inside_heading {
+  font-size: 22px;
+  font-family: PT Sans, sans-serif;
+  padding-bottom: 30px;
+}
+.founder_para {
+  font-family: PT Sans, sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #000;
+}
+.name_date_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e5e5;
+}
+.name_section {
+  font-family: PT Sans, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+.date_section {
+  font-family: PT Sans, sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  .banner {
+    background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/Our_Story-min.jpg?v=1614599222);
+    background-size: cover;
+    background-position: center;
+    width: 50vh;
+  }
+  .banner-image {
+    display: none;
+  }
+  .trust_section {
+    width: 100%;
+  }
+  .div_display_flex {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .div_display_flex div {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .brand_section {
+    width: 100%;
+  }
+  .brand_box {
+    width: 25%;
+  }
+  .safest_fruits_section {
+    height: auto;
+    padding: 50px 0;
+  }
+  .grass {
+    display: none;
+  }
+  .para_text_section {
+    font-size: 18px;
+  }
+  .success_story_section .pdng_left_right {
+    padding: 0;
+  }
+  .success_story_section .pdng_left_right .pdng_right {
+    padding-right: 0;
+  }
+  .success_story_section .pdng_left_right .pdng_left {
+    padding-left: 10px;
+  }
+  .success_story_section .story_mrgn_top {
+    margin-top: 20px;
+  }
+  .safest_fruits_para_text {
+    font-size: 16px;
+  }
+  .display-none {
+    display: none;
+  }
+  .owl-carousel {
+    width: 100%;
+    font-size: 18px;
+  }
+}
