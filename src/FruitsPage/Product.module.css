@@ -1,6 +1,13 @@
+.productPage
+{
+    background-color: #eeeeea;
+    margin-top: -37px;
+}
+
 .product
 {
     margin-top: 40px;
+    position: relative;
     display: grid;
     grid-template-columns: 1.4fr 2fr;
     margin-left: 100px;
@@ -8,12 +15,15 @@
     margin-right: 100px;
     min-height: 470px;
     max-height: max-content;
+    
 }
 
 .product>img{
     width:400px;
+    margin-top: 30px;
 }
 .product>div{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;

@@ -1,3 +1,10 @@
+.fruitpage
+{
+    text-align: center;
+    background-color: #eeeeea;
+
+}
+
 .fruits
 {
     display: grid;
@@ -6,6 +13,7 @@
     margin: auto;
     min-height: 480px;
     text-align: center;
+ 
 }
 
 .fruits>div>p{
@@ -38,7 +46,7 @@
 .fruitimage:hover{
     transform: scale(1.12);
     cursor: pointer;
-    border-bottom: 40px solid #437111 ;
+    /* border-bottom: 40px solid #437111 ; */
     color: transparent;
   }
 

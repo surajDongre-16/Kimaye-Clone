@@ -2,7 +2,7 @@
 {
     width: 40%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: -30px;
     display: flex;
     justify-content: space-around;
    

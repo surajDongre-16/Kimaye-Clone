@@ -24,6 +24,7 @@ const Cart = () => {
   const navigate=useNavigate()
   const dispatch=useDispatch()
   const {cartData}=useSelector((state)=>state.cart)
+  const [check,setCheck] =useState()
 
   const incrementQuantity=(data)=>{
     console.log(data)
@@ -149,17 +150,17 @@ const Cart = () => {
         <Center display='flex' flexDirection='column'>
           <Text>Pick a Delivery date:</Text>
           <br />
-          <Input type='date' size='md' w='20%' bg='white' />
+          <Input name='date' type='date' size='md' w='20%' bg='white' />
           <br/>
 
           <Text>Choose a time:</Text>
           <br/>
-          <Select w='20%' size='md' bg='white'>
+          <Select w='20%' size='md' bg='white' name='time'>
             <option>Select a time</option>
-            <option value="">07:00AM-11:00AM</option>
-            <option value="">11:00AM-02:00PM</option>
-            <option value="">02:00PM-04:00PM</option>
-            <option value="">04:00PM-08:00PM</option>
+            <option value="1">07:00AM-11:00AM</option>
+            <option value="1">11:00AM-02:00PM</option>
+            <option value="1">02:00PM-04:00PM</option>
+            <option value="1">04:00PM-08:00PM</option>
           </Select>
           <br/>
           <Heading as='h4' size='md' color='gray' >

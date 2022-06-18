@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-
+import { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Routes, Route, Link } from "react-router-dom";
@@ -27,16 +27,14 @@ import OrderConfirm from "./pages/payment-section/OrderConfirm";
 
 import { Button } from "@chakra-ui/react";
 import Shipping from "./pages/payment-section/Shipping";
-
+import RazorPay from "./pages/payment-section/RazorPay";
 
 import AllFruits from './FruitsPage/Allfruits';
 import FruitCombos from './FruitsPage/FruitCombos';
 import FreshCuts from './FruitsPage/FreshCuts';
 import Gifts from './FruitsPage/Gifts';
-import FruitNavbar from './FruitsPage/FruitNavbar';
 import Products from './FruitsPage/Products';
-
-
+import LocRequiredAuth from "./hoc/LocRequiredAuth"
 import Blog from "./pages/Blog";
 import OurStory from "./pages/OurStory";
 import LocRequiredAuth from "./hoc/LocRequiredAuth";
@@ -72,7 +70,7 @@ function App() {
         <div>
 
           <Navbar />
-   <FruitNavbar/>
+         
           <Routes>
             <Route path="/" element={<Shop />} />
             <Route
@@ -83,7 +81,7 @@ function App() {
                 </LocRequiredAuth>
               }
             />
-            <Route path="/our-story" element={<OurStory/>}/>
+            <Route path="/our-story" element={<OurStory />} />
             <Route path="/Grow" element={<Grow />} />
             <Route path="/Grow/:id" element={<Blog />} />
             <Route path="/Location" element={<Location />} />
@@ -94,37 +92,17 @@ function App() {
             <Route path="/shipping" element={<Shipping />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/orderconfirm" element={<OrderConfirm />} />
-              
-               <Route path='/allfruits' element={<AllFruits/>}></Route>
-        <Route path='/freshcuts' element={<FreshCuts/>}></Route>
-        <Route path='/fruitcombos' element={<FruitCombos/>}></Route>
-        <Route path='/gifts' element={<Gifts/>}></Route>
-        <Route path='/products' element={<Products/>}/>
+            <Route path='/allfruits' element={<AllFruits />}></Route>
+            <Route path='/freshcuts' element={<FreshCuts />}></Route>
+            <Route path='/fruitcombos' element={<FruitCombos />}></Route>
+            <Route path='/gifts' element={<Gifts />}></Route>
+            <Route path='/products' element={<Products />} />
           </Routes>
-          //{" "}
+          {/* //{" "}
           <Button>
             <Link to="/cart">cart page</Link>
-          </Button>
-          {/* //{" "}
-          <Routes>
-            // <Route path="/" element={<Shop />} />
-            //{" "}
-            <Route
-              path="/Learn"
-              element={
-                <LocRequiredAuth>
-                  <Learn />
-                </LocRequiredAuth>
-              }
-            />
-            // <Route path="/Grow" element={<Grow />} />
-            // <Route path="/Grow/:id" element={<Blog />} />
-            // <Route path="/LocBtn" element={<LocBtn />} />
-            // <Route path="/Location" element={<Location />} />
-            // <Route path="/Login" element={<Login />} />
-            // {/* <Route path="/Cart" element={<Cart />} /> */}
-          // {/* </Routes> */}
-
+          </Button> */}
+         
         </div>
       )}
       ;
@@ -133,3 +111,6 @@ function App() {
 }
 
 export default App;
+
+        
+
