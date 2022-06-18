@@ -1,0 +1,48 @@
+.each>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 550px;
+ 
+  }
+  
+  .each span {
+    padding: 20px;
+   
+   margin-left: -55%;
+    text-align: center;
+    color:#FFFFFF;
+  
+  
+  }
+  .each span >button{
+    height: 35px;
+    width:30%;
+    border-radius: 15px;
+    border:none;
+    background:#98CB4C;
+    color:#FFFFFF;
+    font-size: 20px;
+  
+  }
+  .each span >h1{
+    /* background-image: url("https://cdn.shopify.com/s/files/1/0449/5225/6667/files/red-ribbon.png?v=1599479875");
+   
+    margin-top: -30px;
+    padding-right: 20px; */
+    position: relative;
+    padding: 0 0.5em 0 0.25em;
+    margin-left: -0.25em;
+    color: #fff;
+    background: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/red-ribbon.png?v=1599479875) no-repeat center center transparent;
+    background-size: 100% 100%;
+    line-height: 1.2;
+    font-size: 40px;
+    
+}
+.top{
+  margin-top: -30px;
+  text-align: center;
+}  
+ 
