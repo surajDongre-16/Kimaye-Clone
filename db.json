@@ -671,6 +671,14 @@
       "count": 1
     },
     {
+
+      "id": 6,
+      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Cherry-cover_29fec80d-0bed-4148-808c-0707021b5db3_360x.jpg?v=1625033744",
+      "name": "Kimaye Cherries (Indian) (250g)",
+      "price": 740,
+      "weight": "Weight  :  1 kg",
+      "count": 1
+
       "id": 32,
       "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/24d0f9c9-fe83-40a3-84ab-300e73e4ff8d_360x.png?v=1611811511",
       "name": "Coconut Chunks Cup (100g)",
@@ -690,6 +698,7 @@
       "name": "Kimaye Dasheri Mangoes (Pack of 3,6 &12)",
       "price": 350,
       "count": 5
+
     }
   ]
 }

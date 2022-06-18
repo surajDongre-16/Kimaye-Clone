@@ -3,13 +3,13 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { AiFillQuestionCircle } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
-import { additem, getCartAPI } from '../store/cart/cart.actions'
+import {    getCartAPI } from '../store/cart/cart.actions'
 
 const SelectedProduct = () => {
     const {cartData}=useSelector((state)=>state.cart)
     const [total,setTotal]=useState()
     const dispatch=useDispatch()
-    const [discount,setDiscount]=useState(0)
+    const [discount,setDiscount]=useState()
 
     const discountFn=(e)=>{
         setDiscount(e.target.value)
@@ -36,24 +36,37 @@ const SelectedProduct = () => {
  
     useEffect(()=>{
         let totalPrice=0
-        // if(cartData?.length===0){
-          dispatch(getCartAPI())
-          axios.get("http://localhost:8080/cartData")
-          .then((r)=>{
-            setTotal([...r.data])
-    
-            for(let i=0;i<r.data.length;i++){
-              totalPrice=totalPrice+(r.data[i].price * r.data[i].count)
-            }
-            setTotal(totalPrice)
-          })
-          // console.log(totalPrice)
-        // }
-      },[])
+        if(discount > 0){
+            dispatch(getCartAPI())
+            axios.get("http://localhost:8080/cart-Data")
+            .then((r)=>{
+              setTotal([...r.data])
+      
+              for(let i=0;i<r.data.length;i++){
+                totalPrice=totalPrice+(r.data[i].price * r.data[i].count)
+              }
+              setTotal(totalPrice-discount)
+            })
+        }
+        else{
+            dispatch(getCartAPI())
+            axios.get("http://localhost:8080/cart-Data")
+            .then((r)=>{
+              setTotal([...r.data])
+      
+              for(let i=0;i<r.data.length;i++){
+                totalPrice=totalPrice+(r.data[i].price * r.data[i].count)
+              }
+              setTotal(totalPrice)
+            })
+        }
+        
+          
+      },[discount])
   return (
     <>
         {cartData.map((item)=>(
-            <Flex key={item.id} justifyContent='space-between' alignItems='center'>
+            <Flex key={item.id} justifyContent='space-between' alignItems='center' marginBottom='2%'>
                 <Image border='1px solid gray' borderRadius='10px' w='70px' h='70px' src={item.image}/>
                 <Flex flexDirection='column' paddingLeft='3%'>
                     <Text fontSize='15px' >{item.name}</Text>
@@ -68,7 +81,7 @@ const SelectedProduct = () => {
         <br/>
         <Box display="flex" justifyContent='space-between' >
             <Input fontSize='20px' placeholder='Gift card or discount code' w='70%' onChange={discountFn} />
-            <Button bg='rgb(199, 199, 199)' color='white' fontSize='20px' onClick={handleDiscount} >Apply</Button>
+            <Button bg='rgb(199, 199, 199)' color='white' colorScheme='red' fontSize='20px' onClick={handleDiscount} >Apply</Button>
         </Box>
             {discount==="error"? <Text color='red' fontSize='15px'>Invalid Coupune Code</Text> : ""}
         <br/>
@@ -85,7 +98,7 @@ const SelectedProduct = () => {
             </Flex>
             {discount> 0 ?<Flex justifyContent='space-between' marginBottom='3%'  >
                 <Text>Discounted Subtotal</Text>
-                <Text color='black' >₹{total-discount}</Text>
+                <Text color='black' >₹{total}</Text>
             </Flex> : ""}
         </Box>
         <br />
@@ -94,7 +107,7 @@ const SelectedProduct = () => {
         <Flex justifyContent='space-between'>
             <Text fontSize='20px'>Total</Text>
             <Text display='flex' justifyContent='space-between' alignItems='center' w='20%'><Text color='gray' fontSize='14px' >INR</Text> <Text fontSize='20px' 
-            >₹{discount>0 ? `${total>300 ? total-discount : total-discount+50}` : total>300 ? total : total+50 }</Text> </Text>
+            >₹{ total>300 ? total : total+50 }</Text> </Text>
         </Flex>
    </>
 
@@ -102,3 +115,4 @@ const SelectedProduct = () => {
 }
 
 export default SelectedProduct
+// discount>0 ? `${total>300 ? total-discount : total-discount+50}` :

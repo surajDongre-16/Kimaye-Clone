@@ -15,7 +15,7 @@ import SelectedProduct from '../../components/SelectedProduct';
 const Information = () => {
     const navigate=useNavigate()
     const dispatch=useDispatch()
-    const {cartData}=useSelector((state)=>state.cart)
+    // const {cartData}=useSelector((state)=>state.cart)
     const [total,setTotal]=useState()
     const [userInfo,setUserInfo]=useState({})
 
@@ -32,17 +32,14 @@ const Information = () => {
     const formSubmit=(e)=>{
         e.preventDefault()
         localStorage.setItem("userInfo",JSON.stringify(userInfo))
-        // dispatch(saveUserInfo(userInfo))
-        console.log(userInfo)
     }
 
 
 
     useEffect(()=>{
         let totalPrice=0
-        // if(cartData?.length===0){
           dispatch(getCartAPI())
-          axios.get("http://localhost:8080/cartData")
+          axios.get("http://localhost:8080/cart-Data")
           .then((r)=>{
             setTotal([...r.data])
     
@@ -51,8 +48,6 @@ const Information = () => {
             }
             setTotal(totalPrice)
           })
-          // console.log(totalPrice)
-        // }
       },[])
 
   return (

@@ -13,6 +13,9 @@ import {
   Button,
   Input,
   useDisclosure,
+  Text,
+  Box,
+  Image,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { SearchIcon } from "@chakra-ui/icons";
@@ -22,11 +25,18 @@ import Location from "../pages/Location";
 import LocBtn from "../pages/LocBtn";
 import SearchBar from "./SearchBar";
 import axios from 'axios'
+import { useSelector } from "react-redux";
 
 const Right_box = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const [data, setData] = useState([])
+  // const {cartData}=useSelector((state)=>state.product)
+  // console.log(cartData)
+
+
+  const decrementQuantity=()=>{}
+  const incrementQuantity=()=>{}
 
   useEffect(()=>{
     axios.get('http://localhost:8080/all-fruits')
@@ -104,11 +114,15 @@ const Right_box = () => {
         >
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+            
+            <DrawerHeader className={navcss.cart_drawer_heading} h='200px' display='flex' justifyContent='space-around' 
+              >SHOPPING CART <Text>close<DrawerCloseButton /></Text></DrawerHeader>
 
             <DrawerBody>
-              <Input placeholder="Type here..." />
+             
+              <Box>
+               
+              </Box>
             </DrawerBody>
 
             <DrawerFooter>
@@ -125,3 +139,21 @@ const Right_box = () => {
 };
 
 export default Right_box;
+
+
+// {cartData.map((item)=>(
+//   console.log(item)
+//   // <div>
+//   //   <Image boxSize='50px'
+//   //     objectFit='cover'
+//   //     src={item.image}
+//   //     alt={item.name} />
+//   //     <div>
+//   //       <Text>{item.name}</Text>
+//   //       <Text>{item.weight}</Text>
+//   //       <Text>₹ {item.price}</Text>
+//   //       <Text><Button onClick={()=>decrementQuantity(item)}>-</Button>{item.count}<Button onClick={()=>incrementQuantity(item)}>+</Button></Text>
+//   //       {/* <Text>₹ {item.price*item.count}</Text> */}
+//   //     </div>
+//   // </div>
+// ))}
