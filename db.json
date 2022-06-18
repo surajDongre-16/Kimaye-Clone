@@ -111,12 +111,12 @@
   ],
   "cartData": [
     {
-      "id": 2,
-      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/litchi--_-keasr_219x.progressive.jpg?v=1654850892",
-      "name": "Kimaye Litchi-Kesar Combo",
-      "weight": "(500 g + 3 pcs)",
-      "price": 40,
-      "count": 6
+      "id": 1,
+      "name": "abcd",
+      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Untitled_design_60_219x.png?v=1624445187",
+      "weight": 200,
+      "count": 15,
+      "price": 40
     }
   ],
   "userDetails": [

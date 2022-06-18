@@ -27,7 +27,7 @@ import OrderConfirm from "./pages/payment-section/OrderConfirm";
 
 import { Button } from "@chakra-ui/react";
 import Shipping from "./pages/payment-section/Shipping";
-
+import RazorPay from "./pages/payment-section/RazorPay";
 
 import AllFruits from './FruitsPage/Allfruits';
 import FruitCombos from './FruitsPage/FruitCombos';
@@ -91,7 +91,6 @@ function App() {
             <Route path="/shipping" element={<Shipping />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/orderconfirm" element={<OrderConfirm />} />
-
             <Route path='/allfruits' element={<AllFruits />}></Route>
             <Route path='/freshcuts' element={<FreshCuts />}></Route>
             <Route path='/fruitcombos' element={<FruitCombos />}></Route>
@@ -111,3 +110,6 @@ function App() {
 }
 
 export default App;
+
+        
+
