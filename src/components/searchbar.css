@@ -1,7 +1,7 @@
 .searchInputs {
   display: flex;
   justify-content: center;
-  width: 150px;
+  width: 180px;
   background-color: rgb(236, 236, 236);
   border-bottom: 1px solid grey;
   border-radius: 0;
@@ -40,7 +40,7 @@ input:focus {
 .dataResult {
   position: absolute;
   width: 300px;
-  background-color: white;
+  background-color: #ececec;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   overflow-y: auto;
@@ -50,11 +50,13 @@ input:focus {
 .dataResult .dataItem {
   width: 90%;
   margin: auto;
-  height: 50px;
+  /* height: 50px; */
   display: flex;
   align-items: center;
+  justify-content: space-between;
   color: black;
   border-bottom: 1px solid;
+  font-size: 14px;
 }
 
 .dataItem p {
@@ -65,7 +67,11 @@ input:focus {
   display: flex;
   align-items: center;
   width: 20%;
-  height: 85%;
+  height: 100%;
+}
+
+.dataItem_content {
+  width: 70%;
 }
 
 .dataItem_img img {

@@ -33,7 +33,7 @@ function SearchBar({ placeholder, data }) {
   };
 
   const handleClick = (id) => {
-    navigate(`/Grow/${id}`);
+    navigate(`/allfruits/${id}`);
     setWordEntered("");
     setFilteredData([]);
   };

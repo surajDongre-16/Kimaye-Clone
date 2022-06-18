@@ -1,12 +1,20 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from 'react'
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom'
 import styles from "./Product.module.css";
 import { Button } from "@chakra-ui/react";
 import axios from "axios";
-const Products = () => {
-  const { getFruits } = useSelector((state) => state.product);
-  const [count, setCount] = useState(1);
+import { getSingleProduct } from '../store/product.action';
 
+const Product = () => {
+    const {id} = useParams()
+    const { getFruits } = useSelector((state) => state.product);
+  const [count, setCount] = useState(1);
+  const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(getSingleProduct("all-fruits",id))
+  },[dispatch,id])
   const add = () => {
     const data = {
       id: getFruits.singledata.id,
@@ -18,7 +26,6 @@ const Products = () => {
     axios.post(`http://localhost:8080/cart-data`, data);
     alert("Product Added To Cart");
   };
-
   return (
     <div className={styles.productPage}>
       <div className={styles.product} key={getFruits.data.id}>
@@ -59,7 +66,7 @@ const Products = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Product
