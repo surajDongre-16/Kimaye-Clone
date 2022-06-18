@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addtoCart, fetchData, getSingleProduct } from '../store/product.action';
 import { Spinner,Alert,AlertIcon } from '@chakra-ui/react'
+import FruitNavbar from "./FruitNavbar"
 import  styles from "./Fruits.module.css"
 const FreshCuts = () => {
     const dispatch=useDispatch();
@@ -23,13 +24,11 @@ const FreshCuts = () => {
     }
 
   return (
-    <div>
+    <div className={styles.fruitpage}>
+      <FruitNavbar/>
     <div className={styles.navigation}><div><i className="material-icons star-icon">home</i><h4>&nbsp;<Link to="/" className={styles.homelink}>Home / </Link></h4><p> &nbsp;Fresh Cuts</p> </div><p>Showing {getFruits.data.length} results</p></div>
     {getFruits.loading &&<Spinner size='lg'/>}
-    {getFruits.error &&<Alert status='error' width="30%" margin="auto" marginTop="30px">
-    <AlertIcon />
-    There was an error processing your request
-  </Alert>}
+    
     <div className={styles.fruits}>
         {!getFruits.loading && getFruits.data.map((fruit)=>
         (

@@ -1,3 +1,10 @@
+.fruitpage
+{
+    text-align: center;
+    background-color: #eeeeea;
+
+}
+
 .fruits
 {
     display: grid;
@@ -6,6 +13,7 @@
     margin: auto;
     min-height: 480px;
     text-align: center;
+ 
 }
 
 .fruits>div>p{
