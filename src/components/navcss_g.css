@@ -26,8 +26,8 @@ background-color:rgb(236,236,236) ;
   width: 30px;
   background-color: rgb(236, 236, 236);
   /* border: 1px solid red; */
+  cursor: pointer;
 }
-
 .ul1 {
   list-style-type: none;
 }
@@ -58,7 +58,7 @@ form {
   font-family: cursive;
 }
 
-.search_input {
+/* .search_input {
   border: 0;
   width: 150px;
   border-bottom: 1px solid grey;
@@ -68,12 +68,12 @@ form {
   height: 40px;
   margin-top: auto;
   margin-bottom: auto;
-}
-.search_input:focus {
+} */
+/* .search_input:focus {
   background-color: rgb(236, 236, 236);
   width: 67%;
   transition: 0.8s;
-}
+} */
 
 form {
   display: flex;
@@ -81,9 +81,10 @@ form {
 }
 
 .btn2 {
-  width: 50px;
+
   /* border:1px solid green; */
-  margin-left: -20px;
+  /* margin-left: -20px; */
+  cursor:pointer;
 }
 
 .inner_box {
@@ -134,4 +135,11 @@ ul {
 .grow:hover {
   color: green;
   border-bottom: 2px solid rgb(78, 78, 78);
+}
+
+
+.bag{
+  font-size: 30px;
+  margin-top: 8px;
+ 
 }

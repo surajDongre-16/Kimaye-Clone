@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import navcss from "./navcss.module.css";
 
 import "./navcss_g.css";
@@ -19,10 +19,20 @@ import { SearchIcon } from "@chakra-ui/icons";
 import Bag from "../assests/Bag.png";
 import Loc from "../assests/Loc.png";
 import Location from "../pages/Location";
+import LocBtn from "../pages/LocBtn";
+import SearchBar from "./SearchBar";
+import axios from 'axios'
 
 const Right_box = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const [data, setData] = useState([])
+
+  useEffect(()=>{
+    axios.get('http://localhost:8080/products')
+    .then((res)=>setData(res.data))
+    .catch((err)=>console.log(err))
+  },[])
 
   return (
     <div className={navcss.Right_box}>
@@ -30,17 +40,12 @@ const Right_box = () => {
         <ul className="ul1">
           <li className="nav-item">
             <div className={navcss.abc}>
-              <Location />
+              <LocBtn />
             </div>
           </li>
         </ul>
 
-        <input
-          className="form-control me-2 shadow-none search_input"
-          type="search"
-          placeholder="Search here..."
-          aria-label="Search"
-        />
+        <SearchBar placeholder='Search here...' data={data} />
 
         <button className={navcss.iconbtn} type="submit">
           <SearchIcon w={4} h={4} />
@@ -48,7 +53,7 @@ const Right_box = () => {
       </form>
 
       <form className={navcss.btn_wrapper}>
-        <Button
+        <span
           className="btn1"
           ref={btnRef}
           _hover="none"
@@ -56,7 +61,7 @@ const Right_box = () => {
           onClick={onOpen}
         >
           <span className="material-icons bag">person_outline</span>
-        </Button>
+        </span>
         <Drawer
           isOpen={isOpen}
           placement="right"
@@ -81,7 +86,7 @@ const Right_box = () => {
           </DrawerContent>
         </Drawer>
 
-        <Button
+        <span
           className="btn2"
           ref={btnRef}
           _hover="none"
@@ -89,8 +94,8 @@ const Right_box = () => {
           onClick={onOpen}
         >
           <img className={navcss.bag_logo} src={Bag} />
-          <sup>10</sup>
-        </Button>
+       
+        </span><sup>10</sup>
         <Drawer
           isOpen={isOpen}
           placement="right"
