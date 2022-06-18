@@ -21,17 +21,8 @@ const Products = () => {
     }
 
 
-    // const updateCount=(count)=>
-    // {
-    //   const data={
-    //     id:getFruits.singledata.id,
-
-    // }
-    //   axios.patch(`http://localhost:3004/cart-data/${data.id}`,{count:count})
-    // }
-
-    // console.log(getFruits.data)
   return (
+    <div className={styles.productPage}>
     <div className={styles.product} key={getFruits.data.id}>
          <img src={getFruits.singledata.image}/>
            <div className={styles.description}> 
@@ -53,7 +44,7 @@ const Products = () => {
             <Button bg="white" marginLeft={3} borderRadius='20px' onClick={add}>Add to cart</Button>
             </span>
             </div>
-            
+            </div>
         </div>
   )
 }

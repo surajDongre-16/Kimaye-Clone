@@ -46,7 +46,7 @@
 .fruitimage:hover{
     transform: scale(1.12);
     cursor: pointer;
-    border-bottom: 40px solid #437111 ;
+    /* border-bottom: 40px solid #437111 ; */
     color: transparent;
   }
 
