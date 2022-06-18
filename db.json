@@ -518,27 +518,6 @@
     }
   ],
   "cart-data": [
-    {
-      "id": 2,
-      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Cherry--_-blueberry_360x.jpg?v=1654851019",
-      "name": "Kimaye Cherry- Blueberry Combo",
-      "price": 80,
-      "weight": "Weight  :  1 kg",
-      "count": 1
-    },
-    {
-      "id": 32,
-      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/24d0f9c9-fe83-40a3-84ab-300e73e4ff8d_360x.png?v=1611811511",
-      "name": "Coconut Chunks Cup (100g)",
-      "price": 140,
-      "count": 4
-    },
-    {
-      "id": 24,
-      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/peach--_-litchi_360x.jpg?v=1654850921",
-      "name": "Kimaye Litchi -Peach Combo",
-      "price": 277,
-      "count": 3
-    }
+    
   ]
 }
