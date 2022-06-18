@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Divider, Flex, Heading, Image, Spacer, Text } from '@chakra-ui/react'
 import styles from "./payament.module.css"
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -80,7 +80,7 @@ const Payment = () => {
                     </Box>
                     <br />
                     <Box display='flex' alignItems='center' >
-                        <Button bg='#437111 ' color='white' size='lg' padding='5% 3%'
+                        <Button bg='#437111 ' color='white' size='lg' padding='5% 3%' colorScheme='teal'
                          marginRight='5%' onClick={()=>navigate('/razorpay')} >Complete order</Button>
                         <Text color='red' onClick={()=>navigate('/shipping')}>Return to shipping</Text>
                     </Box>

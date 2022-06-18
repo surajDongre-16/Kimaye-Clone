@@ -14,7 +14,6 @@ import { useNavigate } from 'react-router-dom'
 import styles from "./cart.module.css"
 import {useDispatch, useSelector} from "react-redux"
 import { useEffect } from 'react'
-import { GiPartyPopper } from "react-icons/gi";
 import { additem, deleteCartItem, getCartAPI, removeitem } from '../../store/cart/cart.actions'
 import axios from 'axios'
 
@@ -24,8 +23,6 @@ const Cart = () => {
   const navigate=useNavigate()
   const dispatch=useDispatch()
   const {cartData}=useSelector((state)=>state.cart)
-  const [check,setCheck] =useState()
-
   const incrementQuantity=(data)=>{
     console.log(data)
     const updatedData={
@@ -33,7 +30,7 @@ const Cart = () => {
       "image": data.image,
       "name": data.name,
       "weight": data.weight,
-      "price": 40,
+      "price": data.price,
       "count": data.count+1
     }
     // console.log(updatedData)
@@ -48,7 +45,7 @@ const Cart = () => {
       "image": data.image,
       "name": data.name,
       "weight": data.weight,
-      "price": 40,
+      "price": data.price,
       "count": data.count-1
     }
     // console.log(updatedData)
@@ -65,9 +62,8 @@ const Cart = () => {
 
   useEffect(()=>{
     let totalPrice=0
-    // if(cartData?.length===0){
       dispatch(getCartAPI())
-      axios.get("http://localhost:8080/cartData")
+      axios.get("http://localhost:8080/cart-Data")
       .then((r)=>{
         setTotal([...r.data])
 
@@ -76,8 +72,7 @@ const Cart = () => {
         }
         setTotal(totalPrice)
       })
-      // console.log(totalPrice)
-    // }
+      
   },[trig,dispatch])
   return (
     <>
@@ -135,7 +130,7 @@ const Cart = () => {
                     </Flex>
                   </Td>
                   <Td>₹ {data.price}</Td>
-                  <Td><Button onClick={()=>decrementQuantity(data)}>-</Button>{data.count}<Button onClick={()=>incrementQuantity(data)}>+</Button></Td>
+                  <Td><Button disabled={data.count==1} onClick={()=>decrementQuantity(data)}>-</Button>{data.count}<Button onClick={()=>incrementQuantity(data)}>+</Button></Td>
                   <Td>₹ {data.price*data.count}</Td>
                 </Tr>
               ))}

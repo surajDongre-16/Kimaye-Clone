@@ -11,7 +11,7 @@ const OrderConfirm = () => {
     const navigate=useNavigate()
     const myTimeout=setTimeout(home,12000)
     function home(){
-        navigate('/cart')
+        navigate('/allfruits')
         clearTimeout(myTimeout)
     }
 

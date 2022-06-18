@@ -61,7 +61,7 @@ const Shipping = () => {
                     </Box>
                     <br />
                     <Box display='flex' alignItems='center' >
-                        <Button bg='#437111 ' color='white' size='lg' padding='5% 3%' marginRight='5%' onClick={()=>navigate('/payment')} >Continue to payment</Button>
+                        <Button bg='#437111' colorScheme='teal'  color='white' size='lg' padding='5% 3%' marginRight='5%' onClick={()=>navigate('/payment')} >Continue to payment</Button>
                         <Text color='red' onClick={()=>navigate("/information")}>Return to information</Text>
                     </Box>
                     <Divider margin='35% auto 0 ' borderBottom='1px solid rgb(207, 206, 206)' />

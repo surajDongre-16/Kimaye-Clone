@@ -90,6 +90,7 @@ function App() {
             <Route path="/information" element={<Information />} />
             <Route path="/shipping" element={<Shipping />} />
             <Route path="/payment" element={<Payment />} />
+            <Route path="/razorpay" element={<RazorPay />} />
             <Route path="/orderconfirm" element={<OrderConfirm />} />
             <Route path='/allfruits' element={<AllFruits />}></Route>
             <Route path='/freshcuts' element={<FreshCuts />}></Route>
@@ -97,14 +98,13 @@ function App() {
             <Route path='/gifts' element={<Gifts />}></Route>
             <Route path='/products' element={<Products />} />
           </Routes>
-          {/* //{" "}
-          <Button>
+          
+          {/* <Button>
             <Link to="/cart">cart page</Link>
-          </Button> */}
+          </Button>  */}
          
         </div>
-      )}
-      ;
+       )}
     </div>
   );
 }
