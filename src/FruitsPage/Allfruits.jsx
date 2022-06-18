@@ -21,8 +21,10 @@ const Allfruits = () => {
     {
       setToggle(!toggle)
     if(toggle)
-
+    {
+      alert("Product Added To Cart");
       dispatch(addtoCart("all-fruits",id));
+    }
     }
 
 
@@ -41,22 +43,11 @@ const Allfruits = () => {
         (
             <div key={fruit.id} >
              <Link to="/products"> <img src={fruit.image} onClick={()=>{showProduct(fruit.id)}} className={styles.fruitimage}/></Link>
-             <Button  width="320px" colorScheme="green" marginLeft="-27px" marginTop="-30px" className={styles.addtocart}  onClick={()=>{
+             <Button  width="320px" colorScheme="green" marginLeft="11px" marginTop="-30px" className={styles.addtocart}  onClick={()=>{
                 change(fruit.id)}}>{toggle ?  "ADD TO CART" :"CHOOSE YOUR PACK" }</Button>
-            <p>{fruit.name}</p>
+               <p>{fruit.name}</p>
             <h3>₹{fruit.price}</h3>
-            {/* <SlideFade in={isOpen} offsetY='20px'>
-        <Box
-          p='20px'
-          color='white'
-          mt='1'
-          bg='#437111'
-          rounded='md'
-          shadow='md'
-        >
-         Add To cart
-        </Box>
-      </SlideFade> */}
+           
             </div>
         )) }
     </div>
