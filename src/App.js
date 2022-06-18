@@ -1,5 +1,4 @@
 // import logo from './logo.svg';
-import { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Routes, Route, Link } from "react-router-dom";
@@ -37,7 +36,7 @@ import Products from './FruitsPage/Products';
 import LocRequiredAuth from "./hoc/LocRequiredAuth"
 import Blog from "./pages/Blog";
 import OurStory from "./pages/OurStory";
-import LocRequiredAuth from "./hoc/LocRequiredAuth";
+// import LocRequiredAuth from "./hoc/LocRequiredAuth";
 
 
 function App() {

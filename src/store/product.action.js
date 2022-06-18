@@ -25,11 +25,10 @@ export const addtoCart = (link, id) => (dispatch) => {
                 image: r.data.image,
                 name: r.data.name,
                 price: r.data.price,
-                weight: r.data.weight,
                 count: 1
             }
-
             axios.post(`http://localhost:8080/cart-data`, data)
+            
         })
 
 
