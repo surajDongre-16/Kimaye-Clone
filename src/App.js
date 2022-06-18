@@ -98,11 +98,7 @@ function App() {
             <Route path='/gifts' element={<Gifts />}></Route>
             <Route path='/products' element={<Products />} />
           </Routes>
-          
-          {/* <Button>
-            <Link to="/cart">cart page</Link>
-          </Button>  */}
-         
+               
         </div>
        )}
     </div>

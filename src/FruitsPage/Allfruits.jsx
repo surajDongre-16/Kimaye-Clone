@@ -9,12 +9,12 @@ import FruitNavbar from "./FruitNavbar"
 const Allfruits = () => {
     const dispatch=useDispatch();
     const[toggle,setToggle]=useState(false);
-    // const { isOpen, onToggle } = useDisclosure()
     const {getFruits}=useSelector((state)=>state.product)
     useEffect(()=>
     {
         dispatch(fetchData("all-fruits"));
-    },[])
+
+    },[toggle])
 
 
     const change=(id)=>

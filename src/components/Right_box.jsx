@@ -16,8 +16,11 @@ import {
   Text,
   Box,
   Image,
+  Flex,
+  Divider,
+  Progress,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SearchIcon } from "@chakra-ui/icons";
 import Bag from "../assests/Bag.png";
 import Loc from "../assests/Loc.png";
@@ -25,24 +28,62 @@ import Location from "../pages/Location";
 import LocBtn from "../pages/LocBtn";
 import SearchBar from "./SearchBar";
 import axios from 'axios'
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { additem, getCartAPI, removeitem } from "../store/cart/cart.actions";
 
 const Right_box = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const [data, setData] = useState([])
-  // const {cartData}=useSelector((state)=>state.product)
-  // console.log(cartData)
+  const [total,setTotal]=useState()
+  const navigate=useNavigate()
+const [trig,setTrig]=useState(false)
+const {cartData}=useSelector((state)=>state.cart)
+const dispatch=useDispatch()
 
-
-  const decrementQuantity=()=>{}
-  const incrementQuantity=()=>{}
+  const decrementQuantity=(data)=>{
+    const updatedData={
+      "id": data.id,
+      "image": data.image,
+      "name": data.name,
+      "weight": data.weight,
+      "price": data.price,
+      "count": data.count-1
+    }
+    dispatch(removeitem(updatedData))
+    setTrig(!trig)
+  }
+  const incrementQuantity=(data)=>{
+    const updatedData={
+      "id": data.id,
+      "image": data.image,
+      "name": data.name,
+      "weight": data.weight,
+      "price": data.price,
+      "count": data.count+1
+    }
+    
+    dispatch(additem(updatedData))
+    setTrig(!trig)
+  }
 
   useEffect(()=>{
     axios.get('http://localhost:8080/products')
     .then((res)=>setData(res.data))
     .catch((err)=>console.log(err))
-  },[])
+
+    let totalPrice=0
+      dispatch(getCartAPI())
+      axios.get("http://localhost:8080/cart-Data")
+      .then((r)=>{
+        setTotal([...r.data])
+
+        for(let i=0;i<r.data.length;i++){
+          totalPrice=totalPrice+(r.data[i].price * r.data[i].count)
+        }
+        setTotal(totalPrice)
+      })
+  },[trig,dispatch])
 
   return (
     <div className={navcss.Right_box}>
@@ -105,7 +146,7 @@ const Right_box = () => {
         >
           <img className={navcss.bag_logo} src={Bag} />
        
-        </span><sup>10</sup>
+        </span><sup>{cartData.length}</sup>
         <Drawer
           isOpen={isOpen}
           placement="right"
@@ -117,20 +158,41 @@ const Right_box = () => {
             
             <DrawerHeader className={navcss.cart_drawer_heading} h='200px' display='flex' justifyContent='space-around' 
               >SHOPPING CART <Text>close<DrawerCloseButton /></Text></DrawerHeader>
-
             <DrawerBody>
-             
-              <Box>
-               
-              </Box>
-            </DrawerBody>
+             <>
+              {cartData.map((item)=>(
+                  <Flex fontSize='14px' h='100px' justifyContent='space-between' margin=' 2% auto' alignItems='center' >
+                    <Image boxSize='50px'
+                      objectFit='cover'
+                      src={item.image}
+                      alt={item.name} />
+                      <Box>
+                        <Text>{item.name}</Text>
+                         <Text>{item.weight}</Text>
+                        <Text>₹ {item.price}</Text>
+                        <Text><Button size='xs' disabled={item.count ===1} onClick={()=>decrementQuantity(item)}>-</Button>{item.count}<Button size='xs' onClick={()=>incrementQuantity(item)}>+</Button></Text>
+                        {/* <Text>₹ {item.price*item.count}</Text> */}
+                      </Box>
+                  </Flex>
+                ))}
+                <Divider borderBottom='1px solid rgb(207, 206, 206)' marginTop='10%' />
+                <Flex margin='5%' justifyContent='space-between' fontSize='20px' fontWeight='bolder'  color="green" ><Text>SUBTOTAL:</Text> <Text>₹ {total}</Text> </Flex>
+                <Divider borderBottom='1px solid rgb(207, 206, 206)' marginBottom='5%' />
+                <Progress color='black' hasStripe value={total > 300 ? 100 : (100*total)/300} />
+                <Text>{total > 300 ? <b>CONGRATULATIONS FREE SHIPPING!</b>  :
+                <>
+                  Spend <b>Rs {300-total}</b> more to reach <b>FREE SHIPPING!</b>
+                </>
+                }</Text>
+                <br/>
+                <Text fontSize='12px' >No tax on fresh fruits. Free shipping above Rs. 300</Text>
+                <br />
+                <Button w='100%' bg='gray' colorScheme='red' color='white' onClick={()=>navigate('/cart')} >CHECK OUT</Button>
+                <br /><br />
+                <Button w='100%' bg='gray' colorScheme='green' color='white' onClick={()=>navigate('/allfruits')} >CONTINUE SHOPPING</Button>
 
-            <DrawerFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme="blue">Save</Button>
-            </DrawerFooter>
+              </>
+            </DrawerBody>
           </DrawerContent>
         </Drawer>
       </form>
@@ -141,19 +203,4 @@ const Right_box = () => {
 export default Right_box;
 
 
-// {cartData.map((item)=>(
-//   console.log(item)
-//   // <div>
-//   //   <Image boxSize='50px'
-//   //     objectFit='cover'
-//   //     src={item.image}
-//   //     alt={item.name} />
-//   //     <div>
-//   //       <Text>{item.name}</Text>
-//   //       <Text>{item.weight}</Text>
-//   //       <Text>₹ {item.price}</Text>
-//   //       <Text><Button onClick={()=>decrementQuantity(item)}>-</Button>{item.count}<Button onClick={()=>incrementQuantity(item)}>+</Button></Text>
-//   //       {/* <Text>₹ {item.price*item.count}</Text> */}
-//   //     </div>
-//   // </div>
-// ))}
+// 
