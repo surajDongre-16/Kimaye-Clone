@@ -12,7 +12,7 @@ import Login from "./pages/Login";
 // import { useEffect, useState } from "react";
 // import RotateLoader from "react-spinners/RotateLoader";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import RotateLoader from "react-spinners/RotateLoader";
 
 import "./App.css";
@@ -25,7 +25,6 @@ import Information from "./pages/payment-section/Information";
 import Payment from "./pages/payment-section/Payment";
 import OrderConfirm from "./pages/payment-section/OrderConfirm";
 
-import LocRequiredAuth from "./hoc/LocRequiredAuth";
 import { Button } from "@chakra-ui/react";
 import Shipping from "./pages/payment-section/Shipping";
 import Blog from "./pages/Blog";
