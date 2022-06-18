@@ -60,7 +60,7 @@ function SearchBar({ placeholder, data }) {
             return (
               <div className="dataItem" key={key}>
                 <div className="dataItem_img">
-                  <img src={value.img} alt="item-image" />
+                  <img src={value.image} alt="item-image" />
                 </div>
                 <div className="dataItem_content">
                   <p

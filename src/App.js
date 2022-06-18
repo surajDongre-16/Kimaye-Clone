@@ -12,7 +12,7 @@ import Login from "./pages/Login";
 // import { useEffect, useState } from "react";
 // import RotateLoader from "react-spinners/RotateLoader";
 
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import RotateLoader from "react-spinners/RotateLoader";
 
 import "./App.css";
@@ -37,6 +37,7 @@ import Products from './FruitsPage/Products';
 import LocRequiredAuth from "./hoc/LocRequiredAuth"
 import Blog from "./pages/Blog";
 import OurStory from "./pages/OurStory";
+import LocRequiredAuth from "./hoc/LocRequiredAuth";
 
 
 function App() {
