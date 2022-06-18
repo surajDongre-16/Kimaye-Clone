@@ -29,7 +29,7 @@ const Right_box = () => {
   const [data, setData] = useState([])
 
   useEffect(()=>{
-    axios.get('http://localhost:8080/products')
+    axios.get('http://localhost:8080/all-fruits')
     .then((res)=>setData(res.data))
     .catch((err)=>console.log(err))
   },[])
