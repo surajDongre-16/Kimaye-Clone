@@ -1,0 +1,42 @@
+.each>div {
+   
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 270px;
+  position: relative;
+    margin-top: 10%;
+    overflow: hidden;
+    border-radius: 15px;
+    
+
+  }
+ 
+  .each{
+    display: flex;
+    margin: auto;
+    width:100%;
+    gap:30px;
+    margin-top:-5%;
+  }
+ 
+  .swiperdiv{
+    background-color:rgb(236, 188, 65);
+    height: 500px;
+    margin-top: -3%
+  }
+ .swiperdiv>h1{
+  margin-bottom: 0.25em;
+  color: #222;
+  font-family: Bitterbrush;
+  font-size: 2.2em;
+  font-weight: 400;
+  letter-spacing: .04em;
+  line-height: 1.18;
+  text-transform: uppercase;
+ padding-top: 20px;
+ }
+.simg{
+  max-width: 100%;
+}  
+  
