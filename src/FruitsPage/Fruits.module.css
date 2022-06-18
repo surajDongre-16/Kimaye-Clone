@@ -1,0 +1,92 @@
+.fruits
+{
+    display: grid;
+    width: 85%;
+    grid-template-columns: repeat(3,1fr);
+    margin: auto;
+    min-height: 480px;
+    text-align: center;
+}
+
+.fruits>div>p{
+    font-size: 18px;
+    font-family: "PT Sans";
+    line-height: 25px;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 25px;
+    color: #252222;
+}
+
+.fruitimage{
+    width: 320px;
+    height: 320px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.fruits>div>h3{
+    color: #cd171f;
+    font-family: "PT Sans", serif;
+    line-height: 29px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+
+.fruitimage:hover{
+    transform: scale(1.12);
+    cursor: pointer;
+    border-bottom: 40px solid #437111 ;
+    color: transparent;
+  }
+
+.navigation{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-left: 9%;
+}
+
+.navigation>p,.navigation>div>p,h4{
+    font-size: 14px;
+    margin-top: 3px;
+   
+}
+
+.navigation>div>i
+{
+    margin-top: 6px;
+    font-size: 16px;
+    color: black;
+}
+.navigation>div{
+    display: flex;
+}
+
+.homelink
+{
+    color: black;
+    text-decoration: none;
+    margin-top: -10px;
+}
+
+
+
+.addtocart
+{
+    margin-top: -30px;
+   opacity: 0;
+    z-index: 1;
+}
+
+.addtocart:hover
+{
+    opacity: 1;
+   /* background-color: green; */
+
+}
+

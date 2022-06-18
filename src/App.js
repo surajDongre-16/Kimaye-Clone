@@ -27,8 +27,19 @@ import OrderConfirm from "./pages/payment-section/OrderConfirm";
 
 import { Button } from "@chakra-ui/react";
 import Shipping from "./pages/payment-section/Shipping";
+
+
+import AllFruits from './FruitsPage/Allfruits';
+import FruitCombos from './FruitsPage/FruitCombos';
+import FreshCuts from './FruitsPage/FreshCuts';
+import Gifts from './FruitsPage/Gifts';
+import FruitNavbar from './FruitsPage/FruitNavbar';
+import Products from './FruitsPage/Products';
+
+
 import Blog from "./pages/Blog";
 import OurStory from "./pages/OurStory";
+
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -58,7 +69,9 @@ function App() {
         </div>
       ) : (
         <div>
+
           <Navbar />
+   <FruitNavbar/>
           <Routes>
             <Route path="/" element={<Shop />} />
             <Route
@@ -80,6 +93,12 @@ function App() {
             <Route path="/shipping" element={<Shipping />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/orderconfirm" element={<OrderConfirm />} />
+              
+               <Route path='/allfruits' element={<AllFruits/>}></Route>
+        <Route path='/freshcuts' element={<FreshCuts/>}></Route>
+        <Route path='/fruitcombos' element={<FruitCombos/>}></Route>
+        <Route path='/gifts' element={<Gifts/>}></Route>
+        <Route path='/products' element={<Products/>}/>
           </Routes>
           //{" "}
           <Button>
@@ -104,6 +123,7 @@ function App() {
             // <Route path="/Login" element={<Login />} />
             // {/* <Route path="/Cart" element={<Cart />} /> */}
           // {/* </Routes> */}
+
         </div>
       )}
       ;
