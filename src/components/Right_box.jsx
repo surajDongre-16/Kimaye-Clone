@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import navcss from "./navcss.module.css";
 
 import "./navcss_g.css";
@@ -20,10 +20,20 @@ import Bag from "../assests/Bag.png";
 import Loc from "../assests/Loc.png";
 import Location from "../pages/Location";
 import LocBtn from "../pages/LocBtn";
+import SearchBar from "./SearchBar";
+import axios from 'axios'
+import Login from "../pages/Login";
 
 const Right_box = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const [data, setData] = useState([])
+
+  useEffect(()=>{
+    axios.get('http://localhost:8080/products')
+    .then((res)=>setData(res.data))
+    .catch((err)=>console.log(err))
+  },[])
 
   return (
     <div className={navcss.Right_box}>
@@ -36,51 +46,31 @@ const Right_box = () => {
           </li>
         </ul>
 
-        <input
-          className="form-control me-2 shadow-none search_input"
-          type="search"
-          placeholder="Search here..."
-          aria-label="Search"
-        />
+        <SearchBar  placeholder='Search here...' data={data} />
 
-        <button className={navcss.iconbtn} type="submit">
+        <button disabled className={navcss.iconbtn} type="submit">
           <SearchIcon w={4} h={4} />
         </button>
       </form>
 
+
+
+
+
+
       <form className={navcss.btn_wrapper}>
-        <span
-          className="btn1"
-          ref={btnRef}
-          _hover="none"
-          bg="rgb(236,236,236)"
-          onClick={onOpen}
-        >
-          <span className="material-icons bag">person_outline</span>
-        </span>
-        <Drawer
-          isOpen={isOpen}
-          placement="right"
-          onClose={onClose}
-          finalFocusRef={btnRef}
-        >
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>Create your account now</DrawerHeader>
+       
+       <Login/>
 
-            <DrawerBody>
-              <Input placeholder="Type here..." />
-            </DrawerBody>
 
-            <DrawerFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme="blue">Save</Button>
-            </DrawerFooter>
-          </DrawerContent>
-        </Drawer>
+
+
+
+
+
+
+
+
 
         <span
           className="btn2"

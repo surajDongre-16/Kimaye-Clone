@@ -1,0 +1,173 @@
+.box1{
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: auto;
+    width: 80%;
+    margin: auto;
+    gap:40px;
+    margin-bottom: 20px;
+}
+/* .box2{
+    border:1px solid black
+} */
+.box2>div{
+   
+    width: 480px;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+ 
+.box2>div>img{
+    width:500px;
+    transition: 0.5s all ease-in-out;
+   
+  
+}
+.box2>div>img:hover{
+    transform: scale(1.2);
+   
+    
+}
+.box2>h2{
+    font-weight: bolder;
+    font-size: larger; 
+    margin-top: 20px;
+}
+
+.box2>button{
+    background-color: #CD171F;
+    color: #FFFFFF;
+    width:20%;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+}
+.parent>h1{
+    margin-bottom: 0.25em;
+  
+    color: rgb(15, 15, 15);
+    font-family: Bitterbrush;
+    font-size: 2.2em;
+    font-weight: 500;
+    letter-spacing: .04em;
+    line-height: 1.18;
+    text-transform: uppercase;
+   
+  }
+  .parent>h3{
+    margin-bottom: 0;
+    color: #222;
+    font-family: PT Sans,sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: 1.3;
+  }
+
+  .zigzag {
+    background: hsl(89, 97%, 23%);
+    /* background-image: url("https://cdn.shopify.com/s/files/1/0449/5225/6667/files/jazz-bg-texture-min_1.jpg?v=1616673456"); */
+    /* background-size:cover; */
+    /* background-position: center; */
+
+ 
+    height:550px;
+    /* border:1px solid red; */
+    width:100%;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    
+}
+.innerzig>img{
+    width:35%;
+   
+}
+.innerzig{
+    display: flex;
+    gap:30px;
+    justify-content: space-between;
+    width:80%;
+    margin: auto;
+
+}
+.innerzig>div{
+    width:50%;
+    margin-top: 50px;
+}
+.innerzig>div>p{
+    color: #FFFFFF;
+    font-size: medium;
+}
+.innerzig>div>h1{
+    color:rgb(105, 4, 4);
+
+    
+}
+.innerzig>div>button{
+    border-radius: 10px;
+    height:6%;
+    width:25%;
+    border:none;
+    margin-left: -25%;
+   
+}
+.bimg{
+    max-width:100%
+}
+/* *************************************************************** */
+.pastdiv{
+    background-color:rgb(253, 243, 245);
+    height:500px;
+    margin-top: -20px; 
+}
+.griddiv{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin:auto;
+    
+    width:80%;
+    height:300px;
+    gap:20px
+}
+.pastimg{
+  width:100%;
+  border-radius: 20px;
+
+}
+.pastimg:hover{
+    filter: brightness(45%);
+  -webkit-filter: brightness(45%);
+  -moz-filter: brightness(45%);
+  -o-filter: brightness(45%);
+  -ms-filter: brightness(45%);
+  width: 100%;
+ 
+
+}
+.pastdiv>h1{
+    margin-bottom: 0.25em;
+    color: #222;
+    font-family: Bitterbrush;
+    font-size: 2.2em;
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: 1.18;
+    text-transform: uppercase
+}
+.pastdiv>h3{
+    margin-bottom: 0;
+    color: #222;
+    font-family: PT Sans,sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: 1.3;
+}
+.maindiv{
+text-align: center;
+}

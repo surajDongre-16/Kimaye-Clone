@@ -58,22 +58,22 @@ form {
   font-family: cursive;
 }
 
-.search_input {
+/* .search_input {
   border: 0;
   width: 150px;
   border-bottom: 1px solid grey;
-  /* margin-left: -20px; */
+  margin-left: -20px;
   background-color: rgb(236, 236, 236);
   border-radius: 0;
   height: 40px;
   margin-top: auto;
   margin-bottom: auto;
-}
-.search_input:focus {
+} */
+/* .search_input:focus {
   background-color: rgb(236, 236, 236);
   width: 67%;
   transition: 0.8s;
-}
+} */
 
 form {
   display: flex;

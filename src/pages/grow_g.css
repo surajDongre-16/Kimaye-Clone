@@ -1,0 +1,70 @@
+#grow {
+  margin-top: -40px;
+}
+
+.banner_grow {
+  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/grow_by_kimaye.jpg?v=1609401696);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+  height: 58vh;
+  position: relative;
+}
+.page-title {
+  padding: 10px;
+  font-size: 16px;
+}
+.title_heading {
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 8px;
+}
+.breadcrumbs {
+  padding-bottom: 8px;
+}
+.grow_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.grow_flex {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+.grid_container{
+  width: 75%;
+}
+@media (max-width: 767px) {
+  .banner_grow {
+    background-size: 100%;
+    height: 18vh;
+    background-repeat: no-repeat;
+  }
+  .page-title {
+    padding-top: 10px !important;
+  }
+  .title_heading {
+    width: 100%;
+    font-size: 18px;
+  }
+  .hidden {
+    display: none;
+    border: 1px solid red;
+  }
+  .title_links {
+    padding-bottom: 10px;
+  }
+  .grow_flex {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .grid_container {
+    width: 100%;
+    padding: 0;
+    margin: auto;
+  }
+  .grow_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

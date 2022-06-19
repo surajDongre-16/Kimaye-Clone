@@ -1,10 +1,14 @@
 import React from 'react'
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Divider, Flex, Heading, Image, Input, Radio, Spacer, Text, Textarea } from '@chakra-ui/react'
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Divider, Flex, Heading, Image, Radio, Spacer, Text } from '@chakra-ui/react'
 import styles from "./payament.module.css"
-import { AiFillQuestionCircle } from "react-icons/ai";
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import { useNavigate } from 'react-router-dom';
+import SelectedProduct from '../../components/SelectedProduct';
 
 const Shipping = () => {
+    const navigate=useNavigate()
+    let data= JSON.parse(localStorage.getItem("userInfo"))
+
   return (
     <div className={styles.payment_main_box}>
         <Flex>
@@ -29,21 +33,21 @@ const Shipping = () => {
                         </BreadcrumbItem>
                     </Breadcrumb>
                     <br />
-                    <Box bg='white' borderRadius='5px'border='1px solid rgb(207, 206, 206)' >
-                        <Flex w='90%' margin='auto' paddingTop='2%' >
+                    <Box bg='white' borderRadius='5px' border='1px solid rgb(207, 206, 206)' >
+                        <Flex w='90%' margin='auto' paddingTop='2%' paddingBottom='2%'  >
                             <Text color='gray' >Contact</Text>
                             <Spacer/>
-                            <Text>surajdongre8@gmail.com</Text>
+                            <Text>{data.email}</Text>
                             <Spacer/>
-                            <Button bg='none' color='red' >Change</Button>
+                            <Text bg='none' color='red' cursor='pointer' onClick={()=>navigate('/information')} >Change</Text>
                         </Flex>
                         <Divider w='90%' margin=' 0 auto 3%' borderBottom='1px solid rgb(207, 206, 206)' />
-                        <Flex w='90%' margin='auto'>
+                        <Flex w='90%' margin='auto' paddingBottom='2%'>
                             <Text color='gray' >Ship to</Text>
                             <Spacer/>
-                            <Text>surajdongre8@gmail.com</Text>
+                            <Text>{data.address}</Text>
                             <Spacer/>                            
-                            <Button bg='none' color='red' >Change</Button>
+                            <Text bg='none' color='red' cursor='pointer'  onClick={()=>navigate('/information')} >Change</Text>
                         </Flex>
                     </Box>
                     <Box marginTop='5%'>
@@ -52,12 +56,14 @@ const Shipping = () => {
                         <Radio size='md' name='1' colorScheme='red' defaultChecked>
                             Delivery charges
                         </Radio>
-                        <Text>₹50.00</Text>
+                        <Text>{data.total > 300 ? "free shipping" : "₹50.00"}</Text>
                         </Box>
                     </Box>
                     <br />
-                    <Button bg='#437111 ' color='white' size='lg' padding='5% 3%' marginRight='5%' >Continue to payment</Button>
-                    <a href='#'>Return to information</a>
+                    <Box display='flex' alignItems='center' >
+                        <Button bg='#437111 ' color='white' size='lg' padding='5% 3%' marginRight='5%' onClick={()=>navigate('/payment')} >Continue to payment</Button>
+                        <Text color='red' onClick={()=>navigate("/information")}>Return to information</Text>
+                    </Box>
                     <Divider margin='35% auto 0 ' borderBottom='1px solid rgb(207, 206, 206)' />
                     <Box className={styles.a}>
                 <a  href="#">Refund policy</a><a href="#">Shipping policy</a><a href="#">Privacy policy</a><a href="#">Terms of service</a>
@@ -72,42 +78,7 @@ const Shipping = () => {
 
             <Box>
                 <Box margin='15%' w='130%' >
-                    <Flex justifyContent='space-between' alignItems='center'>
-                        <Image border='1px solid gray' borderRadius='10px' w='70px' h='70px' src='https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Cherry-funfact_7d4aa6ea-115e-4114-883b-997e64bf56e1_small.png?v=1625033775'/>
-                        <Flex flexDirection='column' paddingLeft='3%'>
-                            <Text fontSize='15px' >Kimaye Cherries (Indian) (250g)</Text>
-                            <Text fontSize='15px'>250g / Mumbai</Text>
-                        </Flex>
-                        <Spacer/>
-                        <Text> ₹500</Text>
-                    </Flex>
-                    <br />
-                    <Divider borderBottom='1px solid rgb(207, 206, 206)' />
-                    <br/>
-                    <Box display="flex" justifyContent='space-between' >
-                        <Input fontSize='20px' placeholder='Gift card or discount code' w='70%' />
-                        <Button bg='rgb(199, 199, 199)' color='white' fontSize='20px' >Apply</Button>
-                    </Box>
-                    <br/>
-                    <Divider borderBottom='1px solid rgb(207, 206, 206)'   />
-                    <br/>
-                    <Box color='gray'>
-                        <Flex justifyContent='space-between' marginBottom='3%'  >
-                            <Text>Subtotal</Text>
-                            <Text color='black' >₹200</Text>
-                        </Flex>
-                        <Flex justifyContent='space-between'>
-                            <Text display='flex' alignItems='center' justifyContent='space-between' w='20%'>Shipping <AiFillQuestionCircle/></Text>
-                            <Text fontSize='14px' >Free above Rs 300</Text>
-                        </Flex>
-                    </Box>
-                    <br />
-                    <Divider borderBottom='1px solid rgb(207, 206, 206)'/>
-                    <br />
-                    <Flex justifyContent='space-between'>
-                        <Text fontSize='20px'>Total</Text>
-                        <Text display='flex' justifyContent='space-between' alignItems='center' w='20%'><Text color='gray' fontSize='14px' >INR</Text> <Text fontSize='20px' >₹204</Text> </Text>
-                    </Flex>
+                    <SelectedProduct/>
                 </Box>
             </Box>
         </Flex>
