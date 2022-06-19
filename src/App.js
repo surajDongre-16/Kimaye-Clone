@@ -58,7 +58,11 @@ function App() {
         <div>
 
           <Routes>
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={
+            <LocRequiredAuth>
+              <Cart />
+            </LocRequiredAuth>
+          } />
             <Route path="/information" element={<Information />} />
             <Route path="/shipping" element={<Shipping />} />
             <Route path="/payment" element={<Payment />} />
