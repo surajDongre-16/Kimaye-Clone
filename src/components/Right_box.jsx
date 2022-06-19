@@ -131,19 +131,19 @@ const dispatch=useDispatch()
             <DrawerBody>
              <>
               {cartData.map((item)=>(
-                  <Flex fontSize='14px' h='100px' justifyContent='space-between' margin=' 2% auto' alignItems='center' >
+                  <Box display='flex' fontSize='14px' h='100px'margin=' 5% auto' alignItems='center' >
                     <Image boxSize='50px'
                       objectFit='cover'
                       src={item.image}
                       alt={item.name} />
-                      <Box>
+                      <Box marginLeft='5%' >
                         <Text>{item.name}</Text>
                          <Text>{item.weight}</Text>
                         <Text>₹ {item.price}</Text>
                         <Text><Button size='xs' disabled={item.count ===1} onClick={()=>decrementQuantity(item)}>-</Button>{item.count}<Button size='xs' onClick={()=>incrementQuantity(item)}>+</Button></Text>
                         {/* <Text>₹ {item.price*item.count}</Text> */}
                       </Box>
-                  </Flex>
+                  </Box>
                 ))}
                 <Divider borderBottom='1px solid rgb(207, 206, 206)' marginTop='10%' />
                 <Flex margin='5%' justifyContent='space-between' fontSize='20px' fontWeight='bolder'  color="green" ><Text>SUBTOTAL:</Text> <Text>₹ {total}</Text> </Flex>
