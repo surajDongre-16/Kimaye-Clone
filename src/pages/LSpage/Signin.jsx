@@ -10,16 +10,19 @@ import {
   Button,
   Input,
   useDisclosure,
-
 } from "@chakra-ui/react";
 
 import { useNavigate } from "react-router-dom";
-import {FormControl, FormLabel,  Flex,Box,Spacer, Heading,} from "@chakra-ui/react";
-
+import {
+  FormControl,
+  FormLabel,
+  Flex,
+  Box,
+  Spacer,
+  Heading,
+} from "@chakra-ui/react";
 
 import "./Signin.css";
-
-
 
 const Signin = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -47,11 +50,9 @@ const Signin = () => {
       localStorage.setItem("Email", JSON.stringify(email));
       localStorage.setItem("Password", JSON.stringify(password));
 
-      
       setLogin(!login);
     }
   }
- 
 
   const handleClick = (loginemail, loginpass, onClose) => {
     let storedEmail = JSON.parse(localStorage.getItem("Email"));
@@ -61,7 +62,7 @@ const Signin = () => {
       alert("Login Successfull");
       setIsAuth(true);
       onClose();
-      navigate("/myaccount");
+      navigate("/");
     } else {
       alert("Invalid Credential");
     }
@@ -69,9 +70,8 @@ const Signin = () => {
   return (
     <div>
       {isAuth ? (
-        <div onClick={() => navigate("/myaccount")}>
+        <div onClick={() => navigate("/")}>
           <button ref={btnRef} colorScheme="teal" onClick={onOpen}>
-            
             <i style={{ fontSize: "20px" }} class="fa-regular fa-user"></i>
           </button>
         </div>
@@ -91,7 +91,17 @@ const Signin = () => {
               <DrawerCloseButton style={{ color: "white" }} />
               <DrawerHeader>
                 <div
-                  style={{ border: "1px solid", borderColor: "black",height: "80px", width: "320px", marginLeft: "-25px", marginTop: "-16px",color: "white",backgroundColor: "black", }} >
+                  style={{
+                    border: "1px solid",
+                    borderColor: "black",
+                    height: "80px",
+                    width: "320px",
+                    marginLeft: "-25px",
+                    marginTop: "-16px",
+                    color: "white",
+                    backgroundColor: "black",
+                  }}
+                >
                   <h1 style={{ marginTop: "20px", marginLeft: "20px" }}>
                     SIGN IN
                   </h1>
@@ -109,12 +119,9 @@ const Signin = () => {
                           gap="2"
                         >
                           <Box p="2">
-                            <Heading>
-                              Sign In
-                            </Heading>
+                            <Heading>Sign In</Heading>
                           </Box>
                           <Spacer />
-                       
                         </Flex>
                       </div>
                       <div className="container1">
@@ -123,9 +130,7 @@ const Signin = () => {
                           alignItems="center"
                           gap="2"
                         >
-                         
                           <Spacer />
-                       
                         </Flex>
                       </div>
                       <br />
@@ -143,9 +148,7 @@ const Signin = () => {
                             placeholder="First name"
                             borderRadius="none"
                             className="form"
-                            onChange={(event) =>
-                              setfname(event.target.value)
-                            }
+                            onChange={(event) => setfname(event.target.value)}
                           />
                         </FormControl>
                       </div>
@@ -164,9 +167,7 @@ const Signin = () => {
                             placeholder="Last name"
                             borderRadius="none"
                             className="form"
-                            onChange={(event) =>
-                              setlname(event.target.value)
-                            }
+                            onChange={(event) => setlname(event.target.value)}
                           />
                         </FormControl>
                       </div>
@@ -211,7 +212,7 @@ const Signin = () => {
                           />
                         </FormControl>
                       </div>
-                     
+
                       <br />
                       <br />
                       <Button
@@ -226,16 +227,12 @@ const Signin = () => {
                       >
                         REGISTER
                       </Button>
-                     
-                      <div>
-                       
-                      </div>
+
+                      <div></div>
                       <h3 className="mainn">No account yet?</h3>
-                     
                     </form>
                     <Button
                       colorScheme="none"
-                     
                       color="black"
                       width="fit_content"
                       type="submit"
@@ -268,30 +265,58 @@ const Signin = () => {
                       onClick={() =>
                         handleClick(loginemail, loginpass, onClose)
                       }
-                      style={{border: "1px solid",width: "100%", marginTop: "30px",height: "40px", }}
+                      style={{
+                        border: "1px solid",
+                        width: "100%",
+                        marginTop: "30px",
+                        height: "40px",
+                      }}
                     >
                       Login
                     </button>
                     <br />
                     <br />
-                    
+
                     <div
-                      style={{ justifyContent: "center",backgroundColor: "black", display: "flex", border: "1px solid", }}
+                      style={{
+                        justifyContent: "center",
+                        backgroundColor: "black",
+                        display: "flex",
+                        border: "1px solid",
+                      }}
                     >
                       <button
-                        style={{width: "90%",textAlign: "center", color: "white",}}>
+                        style={{
+                          width: "90%",
+                          textAlign: "center",
+                          color: "white",
+                        }}
+                      >
                         Sign in with Facebook
                       </button>
                       <img
-                       style={{ width: "20%" }}
+                        style={{ width: "20%" }}
                         src="https://img.utdstc.com/icon/fe0/ab6/fe0ab67fa0de2b2681602db5708a076f50dd21106e0c2d38b9661875a37e235e:200"
                         alt=""
                       />
                     </div>
                     <div
-                      style={{display: "flex", border: "1px solid",justifyContent: "center",backgroundColor: "black", marginTop: "10px",height: "45px",}} >
+                      style={{
+                        display: "flex",
+                        border: "1px solid",
+                        justifyContent: "center",
+                        backgroundColor: "black",
+                        marginTop: "10px",
+                        height: "45px",
+                      }}
+                    >
                       <button
-                        style={{ width: "90%", textAlign: "center",color: "white", }} >
+                        style={{
+                          width: "90%",
+                          textAlign: "center",
+                          color: "white",
+                        }}
+                      >
                         Sign in with Google
                       </button>
                       <img
@@ -301,24 +326,24 @@ const Signin = () => {
                       />
                     </div>
                     <br />
-                    
-                    
+
                     <div>
                       <button
-                      
                         onClick={() => setLogin(true)}
-                        style={{ border: "1px solid", width: "100%", height: "60px", }} >
+                        style={{
+                          border: "1px solid",
+                          width: "100%",
+                          height: "60px",
+                        }}
+                      >
                         Create an Account
                       </button>
-                     
                     </div>
                   </div>
                 )}
               </DrawerBody>
 
-              <DrawerFooter>
-           
-              </DrawerFooter>
+              <DrawerFooter></DrawerFooter>
             </DrawerContent>
           </Drawer>
         </div>
