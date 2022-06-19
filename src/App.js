@@ -36,7 +36,7 @@ function App() {
 
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 1000);
   }, []);
 
   const { isTry } = useContext(LocContext);
@@ -57,6 +57,17 @@ function App() {
       ) : (
         <div>
 
+          <Routes>
+          <Route path="/cart" element={<Cart />} />
+            <Route path="/information" element={<Information />} />
+            <Route path="/shipping" element={<Shipping />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/razorpay" element={<RazorPay />} />
+            <Route path="/orderconfirm" element={<OrderConfirm />} />
+          </Routes>
+
+
+
           <Navbar />
          
           <Routes>
@@ -75,12 +86,6 @@ function App() {
             <Route path="/Location" element={<Location />} />
             <Route path="/LocBtn" element={<LocBtn />} />
             <Route path="/Login" element={<Login />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/information" element={<Information />} />
-            <Route path="/shipping" element={<Shipping />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/razorpay" element={<RazorPay />} />
-            <Route path="/orderconfirm" element={<OrderConfirm />} />
             <Route path='/allfruits' element={<AllFruits />}></Route>
             <Route path="/allfruits/:id" element={<Product />} />
             <Route path='/freshcuts' element={<FreshCuts />}></Route>

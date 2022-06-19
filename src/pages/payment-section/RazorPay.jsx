@@ -29,7 +29,7 @@ const RazorPay = () => {
   return (
     <Box className={styles.razorBody} >
         <Box className={styles.razor_Inner_Box} >
-            <Box bg='#dc3544' h='150px' padding='5%' display='flex' >
+            <Box bg='#dc3544' h='150px' padding='5%' display='flex'>
                 <Image bg='white' h='100px' borderRadius='5px' src='https://cdn.razorpay.com/logos/FaWkVdgu7SyEYi_medium.png' />
                 <Text marginLeft='10%' color='white' fontSize='25px' >₹ {data.total}</Text>
                 <Text className={styles.close} onClick={()=>navigate('/payment')} >+</Text>
@@ -50,7 +50,7 @@ const RazorPay = () => {
                             <PopoverBody>Please enter a valid card number.</PopoverBody>
                         </PopoverContent>
                     </Popover>
-                    <Input focusBorderColor='none' placeholder='Expiry' w='30%' borderBottom='1px solid red' borderRadius='none' border='none' />
+                    <Input focusBorderColor='none' maxLength="16" placeholder='Expiry' w='30%' borderBottom='1px solid red' borderRadius='none' border='none' />
                     </Flex>
                     <Flex justifyContent='space-between' marginBottom='8%'>
                     <Popover>
@@ -156,7 +156,7 @@ const RazorPay = () => {
         
             </Box>
         </Box>
-        <Box w='15%' margin='auto'  >
+        <Box w='15%' margin='auto' marginTop='7%' >
             <Button borderRadius='5px' border='1px solid gray' bg=' rgb(54, 54, 54)' color='gray' colorScheme='black' >Secured by<Image h='25px'  bg=' rgb(54, 54, 54' color='white' src={razorpay} />
             </Button>
         </Box>

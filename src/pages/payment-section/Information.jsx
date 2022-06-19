@@ -35,10 +35,10 @@ const Information = () => {
         localStorage.setItem("userInfo",JSON.stringify(userInfo))
     }
 
-    // const handleClick=(e)=>{
-    //     e.preventDefault()
-    //     navigate('/shipping')
-    // }   
+    const handleClick=(e)=>{
+        e.preventDefault()
+        navigate('/shipping')
+    }   
 
     useEffect(()=>{
         let totalPrice=0
@@ -91,7 +91,7 @@ const Information = () => {
                     <br /><br />
                     <Text fontSize='20px' >Shipping address</Text>
                     <br />
-                    <form className={styles.form}  >
+                    <form className={styles.form}  onSubmit={handleClick}  >
                         <FormLabel fontWeight='100px' htmlFor='country'>Country</FormLabel>
                         <Select isRequired size='lg' name='country' id='country' placeholder='Select country' bg='white' marginBottom='3%' outline='1px solid gray' onChange={formData} >
                             <option>India</option>
@@ -114,7 +114,7 @@ const Information = () => {
                             <input required size='lg' type='checkbox' onChange={formSubmit} /> <label>Save this information for next time</label>
                         </Box>
                         <Box display='flex' alignItems='center' >
-                            <Button type='submit' marginRight='5%' colorScheme='green' size='lg' onClick={()=>navigate('/shipping')}>
+                            <Button type='submit' marginRight='5%' colorScheme='green' size='lg'>
                                 Continue to shipping 
                             </Button>
                             <Text color='red' cursor='pointer' onClick={()=>navigate('/cart')} >Return to Cart </Text>
