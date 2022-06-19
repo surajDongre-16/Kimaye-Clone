@@ -30,6 +30,7 @@ import SearchBar from "./SearchBar";
 import axios from 'axios'
 import { useDispatch, useSelector } from "react-redux";
 import { additem, getCartAPI, removeitem } from "../store/cart/cart.actions";
+import Signin from "../pages/LSpage/Signin";
 
 const Right_box = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -102,40 +103,9 @@ const dispatch=useDispatch()
           <SearchIcon w={4} h={4} />
         </button>
       </form>
+      <Box display='flex' alignItems='center' marginRight='5%' ><Signin/></Box>
 
       <form className={navcss.btn_wrapper}>
-        <span
-          className="btn1"
-          ref={btnRef}
-          _hover="none"
-          bg="rgb(236,236,236)"
-          onClick={onOpen}
-        >
-          <span className="material-icons bag">person_outline</span>
-        </span>
-        <Drawer
-          isOpen={isOpen}
-          placement="right"
-          onClose={onClose}
-          finalFocusRef={btnRef}
-        >
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>Create your account now</DrawerHeader>
-
-            <DrawerBody>
-              <Input placeholder="Type here..." />
-            </DrawerBody>
-
-            <DrawerFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme="blue">Save</Button>
-            </DrawerFooter>
-          </DrawerContent>
-        </Drawer>
 
         <span
           className="btn2"
