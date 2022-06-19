@@ -1,0 +1,36 @@
+.main {
+    width: 250px;
+    background-color: #fff;
+    position: relative;
+    float: right;
+    margin-right: 8px;
+}
+.container {
+    /* background-color: #3b5998; */
+    margin-top: 20px;
+}
+.container1 {
+    background-color: #dd4b39;
+    margin-top: 10px;
+}
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.userIcon {
+    height:80px;
+    width: 80px;
+    color: rgb(217, 213, 213);
+    margin-top: 30px;
+}
+.mainn {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.login{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
