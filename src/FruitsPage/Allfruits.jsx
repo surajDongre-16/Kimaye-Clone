@@ -43,7 +43,7 @@ const Allfruits = () => {
         (
             <div key={fruit.id} >
              <Link to="/products"> <img src={fruit.image} onClick={()=>{showProduct(fruit.id)}} className={styles.fruitimage}/></Link>
-             <Button  width="320px" colorScheme="green" marginLeft="11px" marginTop="-30px" className={styles.addtocart}  onClick={()=>{
+             <Button  width="320px" colorScheme="green" marginLeft="-15%" marginTop="-30px" className={styles.addtocart}  onClick={()=>{
                 change(fruit.id)}}>{toggle ?  "ADD TO CART" :"CHOOSE YOUR PACK" }</Button>
                <p>{fruit.name}</p>
             <h3>₹{fruit.price}</h3>
