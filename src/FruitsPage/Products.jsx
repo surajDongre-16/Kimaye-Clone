@@ -13,6 +13,7 @@ const Products = () => {
       image: getFruits.singledata.image,
       name: getFruits.singledata.name,
       price: getFruits.singledata.price,
+      weight:getFruits.singledata.weight,
       count: count,
     };
     axios.post(`http://localhost:8080/cart-data`, data);

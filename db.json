@@ -668,7 +668,7 @@
       "name": "Kimaye Dasheri Mangoes (Pack of 3,6 &12)",
       "price": 350,
       "weight": "Weight  :  1 kg",
-      "count": 1
+      "count": 2
     },
     {
       "id": 2,
@@ -700,7 +700,16 @@
       "name": "Kimaye Plum-Peach Combo",
       "price": 120,
       "weight": "Weight  :  1 kg",
-      "count": 1
+      "count": 2
+    },
+    
+    {
+      "id": 8,
+      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Apricot-cover_360x.jpg?v=1624704940",
+      "name": "Kimaye Apricots (Pack of 250g & 500g)",
+      "price": 380,
+      "weight": "Weight  :  250 gm",
+      "count": 5
     }
   ]
 }
