@@ -39,7 +39,7 @@
     margin-top: 20px;
 }
 
-.box2>button{
+.box2>.link>button{
     background-color: #CD171F;
     color: #FFFFFF;
     width:20%;

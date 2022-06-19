@@ -157,7 +157,8 @@ const dispatch=useDispatch()
                 <br/>
                 <Text fontSize='12px' >No tax on fresh fruits. Free shipping above Rs. 300</Text>
                 <br />
-                <Button w='100%' bg='gray' colorScheme='red' color='white' onClick={()=>navigate('/cart')} >CHECK OUT</Button>
+                <Button w='100%' bg='gray' colorScheme='red' color='white' onClick={()=>{navigate('/cart')
+                onClose()}} >CHECK OUT</Button>
                 <br /><br />
                 <Button w='100%' bg='gray' colorScheme='green' color='white' onClick={()=>navigate('/allfruits')} >CONTINUE SHOPPING</Button>
 

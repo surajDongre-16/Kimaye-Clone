@@ -1,8 +1,8 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import homestyle from '../homestyles/home.module.css'
 
 const reccomend = () => {
-
     // data.......//
 const recc =[
     {
@@ -28,6 +28,7 @@ const recc =[
 ]
 // ********************************************//
   return (
+
     <div className={homestyle.parent}>
         <h1>KIMAYE RECOMMENDS</h1>
        <h3>A Handpicked and Curated Fruit offering</h3>
@@ -44,7 +45,9 @@ const recc =[
         <p>{el.description}</p>
         <br/>
         <br/>
-        <button>Shop Now</button>
+        <Link className={homestyle.link} to='/allfruits'>
+        <button> Shop Now</button>
+        </Link>
        </div> 
     ))
    }
