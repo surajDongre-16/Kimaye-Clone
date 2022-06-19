@@ -113,6 +113,7 @@ const Signin = () => {
                   <div className="main">
                     <form onSubmit={handleSubmit}>
                       <div className="container">
+                      <div className="pr">
                         <Flex
                           minWidth="max-content"
                           alignItems="center"
@@ -134,6 +135,7 @@ const Signin = () => {
                         </Flex>
                       </div>
                       <br />
+                      
                       <div>
                         <FormControl>
                           <FormLabel
@@ -230,6 +232,7 @@ const Signin = () => {
 
                       <div></div>
                       <h3 className="mainn">No account yet?</h3>
+                      </div>
                     </form>
                     <Button
                       colorScheme="none"
