@@ -29,6 +29,7 @@ const Location = () => {
     isTry,
   } = useContext(LocContext);
 
+  
   return (
     <div>
       <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>

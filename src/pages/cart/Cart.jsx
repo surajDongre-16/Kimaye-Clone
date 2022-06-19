@@ -1,4 +1,4 @@
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Center, Divider, Flex, Heading, Image, Input, Progress, Select, Spacer, Text, Textarea} from '@chakra-ui/react'
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Center, Divider, Flex, FormControl, FormLabel, Heading, Image, Input, Progress, Select, Spacer, Text, Textarea} from '@chakra-ui/react'
 import {
   Table,
   Thead,
@@ -149,13 +149,16 @@ const Cart = () => {
 
           <Text>Choose a time:</Text>
           <br/>
-          <Select w='20%' size='md' bg='white' name='time'>
+          <Select id='time'  w='20%' size='md' bg='white' name='time'>
             <option>Select a time</option>
             <option value="1">07:00AM-11:00AM</option>
             <option value="1">11:00AM-02:00PM</option>
             <option value="1">02:00PM-04:00PM</option>
             <option value="1">04:00PM-08:00PM</option>
           </Select>
+
+          
+          
           <br/>
           <Heading as='h4' size='md' color='gray' >
           Your current delivery location is Mumbai

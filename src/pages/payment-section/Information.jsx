@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Checkbox, Divider, Flex, FormLabel, Image, Input, Select, Spacer, Text } from '@chakra-ui/react'
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import styles from "./payament.module.css"
 import { AiFillQuestionCircle } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { getCartAPI, saveUserInfo } from '../../store/cart/cart.actions';
 import SelectedProduct from '../../components/SelectedProduct';
+import { LocContext } from '../../ContextApi/LocationAuth';
 
 
 
@@ -18,7 +19,7 @@ const Information = () => {
     // const {cartData}=useSelector((state)=>state.cart)
     const [total,setTotal]=useState()
     const [userInfo,setUserInfo]=useState({})
-
+    
     const formData=(e)=>{
         let {name , value}=e.target
         setUserInfo({
@@ -34,7 +35,10 @@ const Information = () => {
         localStorage.setItem("userInfo",JSON.stringify(userInfo))
     }
 
-
+    // const handleClick=(e)=>{
+    //     e.preventDefault()
+    //     navigate('/shipping')
+    // }   
 
     useEffect(()=>{
         let totalPrice=0
@@ -87,30 +91,30 @@ const Information = () => {
                     <br /><br />
                     <Text fontSize='20px' >Shipping address</Text>
                     <br />
-                    <form className={styles.form} >
+                    <form className={styles.form}  >
                         <FormLabel fontWeight='100px' htmlFor='country'>Country</FormLabel>
-                        <Select size='lg' name='country' id='country' placeholder='Select country' bg='white' marginBottom='3%' outline='1px solid gray' onChange={formData} >
+                        <Select isRequired size='lg' name='country' id='country' placeholder='Select country' bg='white' marginBottom='3%' outline='1px solid gray' onChange={formData} >
                             <option>India</option>
                         </Select>
                         <Box marginBottom='3%' display='flex' justifyContent='space-between' > 
-                            <Input size='lg' name='firstName' placeholder='First name' w='48%' bg='white' outline='1px solid gray' onChange={formData} />
-                            <Input size='lg' name='lastName' placeholder='Last name' w='48%' bg='white' outline='1px solid gray' onChange={formData} />
+                            <Input isRequired  size='lg' name='firstName' placeholder='First name' w='48%' bg='white' outline='1px solid gray' onChange={formData} />
+                            <Input isRequired size='lg' name='lastName' placeholder='Last name' w='48%' bg='white' outline='1px solid gray' onChange={formData} />
                         </Box>
-                        <Input size='lg' name='address' placeholder='Appartment, suit, etc. (optional)' bg='white' marginBottom='3%' outline='1px solid gray' onChange={formData} />
+                        <Input isRequired size='lg' name='address' placeholder='Appartment, suit, etc. (optional)' bg='white' marginBottom='3%' outline='1px solid gray' onChange={formData} />
                         <Flex justifyContent='space-between'  marginBottom='3%'> 
-                            <Input size='lg' w='32%' name='city' placeholder='City' bg='white' outline='1px solid gray' onChange={formData} />
+                            <Input isRequired size='lg' w='32%' name='city' placeholder='City' bg='white' outline='1px solid gray' onChange={formData} />
                             <Select id='state' name='state' placeholder='Select state' w='32%' bg='white' outline='1px solid gray' onChange={formData} >
                                 <option>Maharashtra</option>
                                 <option>Delhi</option>
                             </Select>
-                            <Input size='lg' w='32%' name='pincode' placeholder='PIN code' bg='white' outline='1px solid gray' onChange={formData} />
+                            <Input isRequired size='lg' w='32%' name='pincode' placeholder='PIN code' bg='white' outline='1px solid gray' onChange={formData} />
                         </Flex>
-                        <Input size='lg' name='mobileNo' placeholder='Mobile number for order and delivery updates ' bg='white'  marginBottom='3%' outline='1px solid gray' onChange={formData} />
+                        <Input isRequired size='lg' name='mobileNo' placeholder='Mobile number for order and delivery updates ' bg='white'  marginBottom='3%' outline='1px solid gray' onChange={formData} />
                         <Box marginBottom='3%' >
-                            <input size='lg' type='checkbox' onChange={formSubmit} /> <label>Save this information for next time</label>
+                            <input required size='lg' type='checkbox' onChange={formSubmit} /> <label>Save this information for next time</label>
                         </Box>
                         <Box display='flex' alignItems='center' >
-                            <Button marginRight='5%' colorScheme='green' size='lg' onClick={()=>navigate('/shipping')}>
+                            <Button type='submit' marginRight='5%' colorScheme='green' size='lg' onClick={()=>navigate('/shipping')}>
                                 Continue to shipping 
                             </Button>
                             <Text color='red' cursor='pointer' onClick={()=>navigate('/cart')} >Return to Cart </Text>
