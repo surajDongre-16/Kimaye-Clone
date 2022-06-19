@@ -2,33 +2,22 @@
 import { useContext, useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Shop from "./pages/Shop";
 import Learn from "./pages/Learn";
 import Grow from "./pages/Grow";
 import Location from "./pages/Location";
 import Login from "./pages/Login";
-
-// import { useEffect, useState } from "react";
-// import RotateLoader from "react-spinners/RotateLoader";
-
-// import { useContext, useEffect, useState } from "react";
 import RotateLoader from "react-spinners/RotateLoader";
-
 import "./App.css";
-// import LocRequiredAuth from "./hoc/LocRequiredAuth";
 import LocBtn from "./pages/LocBtn";
 import { LocContext } from "./ContextApi/LocationAuth";
-
 import Cart from "./pages/cart/Cart";
 import Information from "./pages/payment-section/Information";
 import Payment from "./pages/payment-section/Payment";
 import OrderConfirm from "./pages/payment-section/OrderConfirm";
-
-import { Button } from "@chakra-ui/react";
 import Shipping from "./pages/payment-section/Shipping";
 import RazorPay from "./pages/payment-section/RazorPay";
-
 import AllFruits from './FruitsPage/Allfruits';
 import FruitCombos from './FruitsPage/FruitCombos';
 import FreshCuts from './FruitsPage/FreshCuts';
@@ -38,8 +27,6 @@ import LocRequiredAuth from "./hoc/LocRequiredAuth"
 import Blog from "./pages/Blog";
 import OurStory from "./pages/OurStory";
 import Product from "./FruitsPage/Product";
-// import LocRequiredAuth from "./hoc/LocRequiredAuth";
-
 
 function App() {
   const [loading, setLoading] = useState(false);
