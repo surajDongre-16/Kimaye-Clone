@@ -253,26 +253,6 @@
       "li10": "Do not use disinfecting sprays, cleaning wipes or soap on fresh produce, as this can harm its quality and the nutrients the fruit has to offer. Only fresh water should be used in the cleaning of fresh fruits."
     }
   ],
-  "cartData": [
-    {
-      "id": 1,
-      "name": "abcd",
-      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Untitled_design_60_219x.png?v=1624445187",
-      "weight": 200,
-      "count": 15,
-      "price": 40
-    }
-  ],
-  "userDetails": [
-    {
-      "user_email": "surajdongre8@gmail.com",
-      "user_address": "Near Manwatkar Hospital, Ekori ward",
-      "user_city": "Chandrapur",
-      "user_state": "Maharashtra",
-      "user_pincode": "442401",
-      "user_no": 123456789
-    }
-  ],
   "all-fruits": [
     {
       "id": 1,
@@ -662,29 +642,6 @@
     }
   ],
   "cart-data": [
-    {
-      "id": 1,
-      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Dasheri_360x.jpg?v=1623855977",
-      "name": "Kimaye Dasheri Mangoes (Pack of 3,6 &12)",
-      "price": 350,
-      "weight": "Weight  :  1 kg",
-      "count": 2
-    },
-    {
-      "id": 2,
-      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Cherry--_-blueberry_360x.jpg?v=1654851019",
-      "name": "Kimaye Cherry- Blueberry Combo",
-      "price": 80,
-      "weight": "Weight  :  1 kg",
-      "count": 1
-    },
-    {
-      "id": 8,
-      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Apricot-cover_360x.jpg?v=1624704940",
-      "name": "Kimaye Apricots (Pack of 250g & 500g)",
-      "price": 380,
-      "weight": "Weight  :  250 gm",
-      "count": 5
-    }
+    
   ]
 }

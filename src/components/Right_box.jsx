@@ -99,7 +99,7 @@ const dispatch=useDispatch()
 
         <SearchBar placeholder='Search here...' data={data} />
 
-        <button className={navcss.iconbtn} type="submit">
+        <button disabled className={navcss.iconbtn} type="submit">
           <SearchIcon w={4} h={4} />
         </button>
       </form>
