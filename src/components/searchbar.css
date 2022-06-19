@@ -1,10 +1,15 @@
 .searchInputs {
   display: flex;
   justify-content: center;
-  width: 180px;
+  width: 150px;
   background-color: rgb(236, 236, 236);
   border-bottom: 1px solid grey;
   border-radius: 0;
+  margin-top: 25px;
+}
+.searchInputs:hover{
+  width:100%;
+  transition: .5s;
 }
 
 .searchInput {
@@ -20,7 +25,7 @@
   height: 30px; */
   margin: 0;
   margin-top: 5px;
-  background-color: #ececec;
+  background-color: rgb(236, 236, 236);
   /* display: grid; */
   place-items: center;
 }
@@ -40,11 +45,14 @@ input:focus {
 .dataResult {
   position: absolute;
   width: 300px;
-  background-color: #ececec;
+  background-color: rgb(236, 236, 236);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   overflow-y: auto;
   z-index: 2;
+  margin-top: 11.5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .dataResult .dataItem {
@@ -68,6 +76,10 @@ input:focus {
   align-items: center;
   width: 20%;
   height: 100%;
+}
+.dataItem p:hover{
+  color: rgb(109, 151, 9);
+  transition: .2s;
 }
 
 .dataItem_content {
