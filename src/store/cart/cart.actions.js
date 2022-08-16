@@ -21,7 +21,7 @@ const fetchCartDataError=(payload)=>{
 
 const getCartAPI=(payload)=>(dispatch)=>{
     dispatch(fetchCartDataLoading())
-    axios.get("http://localhost:8080/cart-Data")
+    axios.get("https://kimaye-rest-api.herokuapp.com/cart-Data")
     .then((r)=>dispatch(fetchCartDataSuccess(r.data)))
     .catch((e)=>dispatch(fetchCartDataError(e.data)))
 }
@@ -38,14 +38,14 @@ const updateCartData=(payload)=>{
 
 
 export const additem=(payload)=>(dispatch)=>{
-        axios.patch(`http://localhost:8080/cart-Data/${payload.id}`,payload)
+        axios.patch(`https://kimaye-rest-api.herokuapp.com/cart-Data/${payload.id}`,payload)
         .then((r)=> dispatch(updateCartData(r.data)))
 }
 
 
 export const removeitem=(payload)=>(dispatch)=>{
 
-    axios.patch(`http://localhost:8080/cart-Data/${payload.id}`,payload)
+    axios.patch(`https://kimaye-rest-api.herokuapp.com/cart-Data/${payload.id}`,payload)
     .then((r)=>dispatch(updateCartData(r.data)))
 
 }
@@ -70,7 +70,7 @@ const deleteCartItemError=(payload)=>{
 
 const deleteCartItem=(id)=>(dispatch)=>{
     dispatch(deleteCartItemLoading(id))
-    axios.delete(`http://localhost:8080/cart-Data/${id}`)
+    axios.delete(`https://kimaye-rest-api.herokuapp.com/cart-Data/${id}`)
     .then((r)=>dispatch(deleteCartItemSuccess(r)))
     .catch((e)=>dispatch(deleteCartItemError(e.data)))
 }

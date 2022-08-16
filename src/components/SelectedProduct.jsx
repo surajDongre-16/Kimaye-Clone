@@ -38,7 +38,7 @@ const SelectedProduct = () => {
         let totalPrice=0
         if(discount > 0){
             dispatch(getCartAPI())
-            axios.get("http://localhost:8080/cart-Data")
+            axios.get("https://kimaye-rest-api.herokuapp.com/cart-Data")
             .then((r)=>{
               setTotal([...r.data])
       
@@ -50,7 +50,7 @@ const SelectedProduct = () => {
         }
         else{
             dispatch(getCartAPI())
-            axios.get("http://localhost:8080/cart-Data")
+            axios.get("https://kimaye-rest-api.herokuapp.com/cart-Data")
             .then((r)=>{
               setTotal([...r.data])
       

@@ -642,6 +642,13 @@
     }
   ],
   "cart-data": [
-    
+    {
+      "id": 1,
+      "image": "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Dasheri_360x.jpg?v=1623855977",
+      "name": "Kimaye Dasheri Mangoes (Pack of 3,6 &12)",
+      "price": 350,
+      "weight": "Weight  :  1 kg",
+      "count": 2
+    }
   ]
 }

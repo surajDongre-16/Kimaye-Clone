@@ -16,7 +16,7 @@ const Products = () => {
       weight:getFruits.singledata.weight,
       count: count,
     };
-    axios.post(`http://localhost:8080/cart-data`, data);
+    axios.post(`https://kimaye-rest-api.herokuapp.com/cart-data`, data);
     alert("Product Added To Cart");
   };
 

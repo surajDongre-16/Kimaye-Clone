@@ -69,13 +69,13 @@ const dispatch=useDispatch()
   }
 
   useEffect(()=>{
-    axios.get('http://localhost:8080/all-fruits')
+    axios.get('https://kimaye-rest-api.herokuapp.com/all-fruits')
     .then((res)=>setData(res.data))
     .catch((err)=>console.log(err))
 
     let totalPrice=0
       dispatch(getCartAPI())
-      axios.get("http://localhost:8080/cart-Data")
+      axios.get("https://kimaye-rest-api.herokuapp.com/cart-Data")
       .then((r)=>{
         setTotal([...r.data])
 
