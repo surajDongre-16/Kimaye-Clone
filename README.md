@@ -1,4 +1,4 @@
-Live Link: https://kimaye-hamara.netlify.app/
+Live Link: [https://kimaye-hamara.netlify.app](https://kimaye-project.netlify.app/)/
 
 # Getting Started with Create React App
 
