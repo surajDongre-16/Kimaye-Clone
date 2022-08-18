@@ -6,6 +6,15 @@ If you want to explore our project click here -> [https://kimaye-project.netlify
 
 Kimaye is hassle free online fruit ordering platform in Mumbai, Kimaye is a promise of consistently delivering the safest and superior quality fruits.
 
+## Team Members ❤️
+
+- [Suraj Dongre](https://www.github.com/surajDongre-16)
+- [Manish Tiwari](https://github.com/manishtmtmt)
+- [Shristi Kumari](https://github.com/rkshristi123)
+- [Ashwini Perewar](https://github.com/AshwiniPerewar)
+- [Praful Tandekar](https://github.com/prafultandekar)
+- [Akash Keshari](https://github.com/AkashKeshari111)
+
 # Some screenshots of our project
 
 ![kimayeclone1](https://user-images.githubusercontent.com/46663132/184940667-ca8cbe2e-2a7e-4845-8cc1-84c6c0345423.PNG)
