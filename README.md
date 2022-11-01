@@ -1,10 +1,26 @@
-## Kimaye Clone
+# Kimaye
+
+Kimaye is hassle free online fruit ordering platform in Mumbai, Kimaye is a promise of consistently delivering the safest and superior quality fruits.
 
 If you want to explore our project click here -> [https://kimaye-project.netlify.app](https://kimaye-project.netlify.app/)
 
-# About Kimaye
+# Tech Stack
 
-Kimaye is hassle free online fruit ordering platform in Mumbai, Kimaye is a promise of consistently delivering the safest and superior quality fruits.
+- HTML
+- CSS
+- JavaScript
+- React (18.1.0)
+- React-Redux (8.0.2)
+- Redux (4.2.0)
+- Chakra-UI (2.2.1)
+
+# Features
+
+- Sign-up/sign-in
+- Choose location preferences
+- Filter and search data
+- Add data to cart
+- View/edit cart data
 
 ## Team Members ❤️
 
